@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<title>Painel</title>
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="website" property="og:type" />
+	
+	
+	<meta charset="utf-8" />
+  <meta name="robots" content="noindex">
+	<meta content="width=device-width" name="viewport" />
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
+	<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-row-1,
+		.bee-row-10,
+		.bee-row-10 .bee-row-content,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-13,
+		.bee-row-14,
+		.bee-row-15,
+		.bee-row-16,
+		.bee-row-16 .bee-row-content,
+		.bee-row-2,
+		.bee-row-2 .bee-row-content,
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-7,
+		.bee-row-8,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: #000000;
+			color: #000000;
+			font-family: Arial, Helvetica, sans-serif
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3 li a,
+		.bee-row-10 .bee-col-1 .bee-block-5 a,
+		.bee-row-10 .bee-col-1 .bee-block-6 a,
+		.bee-row-10 .bee-col-2 .bee-block-3 li a,
+		.bee-row-10 .bee-col-2 .bee-block-5 a,
+		.bee-row-10 .bee-col-2 .bee-block-6 a,
+		.bee-row-14 .bee-col-1 .bee-block-2 a,
+		.bee-row-14 .bee-col-1 .bee-block-3 a,
+		.bee-row-14 .bee-col-1 .bee-block-4 a,
+		.bee-row-14 .bee-col-1 .bee-block-5 a,
+		.bee-row-14 .bee-col-1 .bee-block-6 a,
+		.bee-row-14 .bee-col-1 .bee-block-7 a,
+		.bee-row-14 .bee-col-1 .bee-block-8 a,
+		.bee-row-15 .bee-col-2 .bee-block-2 a,
+		a {
+			color: #7747FF
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		p {
+			margin: 0
+		}
+
+		.bee-desktop_hide {
+			display: none
+		}
+
+		.bee-row-content {
+			max-width: 600px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w1 {
+			flex-basis: 8.3333333333%
+		}
+
+		.bee-row-content .bee-col-w2 {
+			flex-basis: 16.6666666667%
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33.3333333333%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 66.6666666667%
+		}
+
+		.bee-row-content .bee-col-w10 {
+			flex-basis: 83.3333333333%
+		}
+
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button .content,
+		.bee-html-block {
+			text-align: center
+		}
+
+		.bee-button a,
+		.bee-icon .bee-icon-label-right a {
+			text-decoration: none
+		}
+
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-10 .bee-col-2 .bee-block-1,
+		.bee-row-12 .bee-col-2 .bee-block-1,
+		.bee-row-15 .bee-col-2 .bee-block-1,
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-2 .bee-block-1,
+		.bee-row-7 .bee-col-3 .bee-block-1,
+		.bee-row-8 .bee-col-1 .bee-block-1,
+		.bee-row-8 .bee-col-2 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-list ul {
+			margin: 0;
+			padding: 0 0 0 20px
+		}
+
+		.bee-list ul li {
+			list-style-position: outside
+		}
+
+		.bee-paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.bee-row-1 {
+			background-color: #fc0000
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-12 .bee-row-content,
+		.bee-row-13 .bee-row-content,
+		.bee-row-14 .bee-row-content,
+		.bee-row-15 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-11 .bee-col-1,
+		.bee-row-12 .bee-col-1,
+		.bee-row-12 .bee-col-2,
+		.bee-row-12 .bee-col-3,
+		.bee-row-13 .bee-col-1,
+		.bee-row-15 .bee-col-1,
+		.bee-row-15 .bee-col-2,
+		.bee-row-15 .bee-col-3,
+		.bee-row-16 .bee-col-1,
+		.bee-row-2 .bee-col-1,
+		.bee-row-3 .bee-col-1,
+		.bee-row-3 .bee-col-2,
+		.bee-row-3 .bee-col-3,
+		.bee-row-4 .bee-col-1,
+		.bee-row-5 .bee-col-1,
+		.bee-row-5 .bee-col-2,
+		.bee-row-6 .bee-col-1,
+		.bee-row-6 .bee-col-2,
+		.bee-row-8 .bee-col-1,
+		.bee-row-8 .bee-col-2,
+		.bee-row-9 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-16 .bee-row-content,
+		.bee-row-2 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-2,
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-1,
+		.bee-row-4 .bee-col-1 .bee-block-1,
+		.bee-row-5 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-9 .bee-col-1 .bee-block-2 {
+			padding: 10px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-7 .bee-col-1 {
+			padding: 20px 10px 20px 20px
+		}
+
+		.bee-row-7 .bee-col-2 {
+			padding: 20px 15px
+		}
+
+		.bee-row-7 .bee-col-3 {
+			padding: 20px 20px 20px 10px
+		}
+
+		.bee-row-10 .bee-row-content {
+			border-left: 8px solid transparent;
+			border-radius: 0;
+			border-right: 8px solid transparent;
+			color: #000000
+		}
+
+		.bee-row-10 .bee-col-1 {
+			border-bottom: 2px dashed #476cff;
+			border-left: 2px dashed #476cff;
+			border-right: 2px dashed #476cff;
+			border-top: 2px dashed #476cff;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			border-radius: 0
+		}
+
+		.bee-row-10 .bee-col-2,
+		.bee-row-14 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px;
+			border-radius: 0
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3,
+		.bee-row-10 .bee-col-1 .bee-block-5,
+		.bee-row-10 .bee-col-1 .bee-block-6,
+		.bee-row-10 .bee-col-2 .bee-block-3,
+		.bee-row-10 .bee-col-2 .bee-block-5,
+		.bee-row-10 .bee-col-2 .bee-block-6,
+		.bee-row-14 .bee-col-1 .bee-block-8,
+		.bee-row-15 .bee-col-2 .bee-block-2 {
+			padding: 10px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-7,
+		.bee-row-10 .bee-col-2 .bee-block-7 {
+			padding: 10px;
+			text-align: center
+		}
+
+		.bee-row-10 .bee-col-2 {
+			border-bottom: 2px dotted #476cff;
+			border-left: 2px dotted #476cff;
+			border-right: 2px dotted #476cff;
+			border-top: 2px dotted #476cff
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-4,
+		.bee-row-14 .bee-col-1 .bee-block-6 {
+			padding-top: 10px
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-1 .bee-block-5,
+		.bee-row-14 .bee-col-1 .bee-block-7 {
+			padding-bottom: 20px;
+			padding-right: 10px
+		}
+
+		.bee-row-15 {
+			background-color: #252525
+		}
+
+		.bee-row-16 {
+			background-color: #ffffff
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1 {
+			color: #1e0e4b;
+			font-family: Inter, sans-serif;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-5 .bee-col-2 .bee-block-1 h1,
+		.bee-row-6 .bee-col-2 .bee-block-1 h1 {
+			color: #ffffff;
+			direction: ltr;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 22px;
+			font-weight: 700;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-2 h1,
+		.bee-row-10 .bee-col-2 .bee-block-2 h1,
+		.bee-row-2 .bee-col-1 .bee-block-1 h1,
+		.bee-row-4 .bee-col-1 .bee-block-1 h1,
+		.bee-row-9 .bee-col-1 .bee-block-2 h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 700;
+			letter-spacing: normal;
+			text-align: center;
+			line-height: 120%;
+			direction: ltr
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 h1 {
+			color: #ffffff;
+			font-size: 48px
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 h1 {
+			color: #00ffae;
+			font-size: 38px
+		}
+
+		.bee-row-9 .bee-col-1 .bee-block-2 h1 {
+			color: #ffffff;
+			font-size: 30px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-2 h1,
+		.bee-row-10 .bee-col-2 .bee-block-2 h1 {
+			color: #00ffae;
+			font-size: 26px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3,
+		.bee-row-10 .bee-col-2 .bee-block-3 {
+			color: #ffffff;
+			direction: ltr;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3 ul,
+		.bee-row-10 .bee-col-2 .bee-block-3 ul {
+			list-style-type: revert;
+			list-style-position: inside
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3 li:not(:last-child),
+		.bee-row-10 .bee-col-2 .bee-block-3 li:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-6 p:not(:last-child) {
+			margin-bottom: 0
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3 li ul,
+		.bee-row-10 .bee-col-2 .bee-block-3 li ul {
+			margin-top: 0
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3 li li,
+		.bee-row-10 .bee-col-2 .bee-block-3 li li {
+			margin-left: 30px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-5,
+		.bee-row-10 .bee-col-2 .bee-block-5 {
+			color: #c0c0c0;
+			direction: ltr;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-5 p:not(:last-child),
+		.bee-row-10 .bee-col-1 .bee-block-6 p:not(:last-child),
+		.bee-row-10 .bee-col-2 .bee-block-5 p:not(:last-child),
+		.bee-row-10 .bee-col-2 .bee-block-6 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-5 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-7 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-8 p:not(:last-child),
+		.bee-row-15 .bee-col-2 .bee-block-2 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-6,
+		.bee-row-10 .bee-col-2 .bee-block-6 {
+			color: #00ffae;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 60px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		@media (max-width:620px) {
+			.bee-desktop_hide {
+				display: block !important
+			}
+
+			img.bee-fullwidthOnMobile {
+				max-width: none !important
+			}
+
+			.bee-mobile_hide {
+				display: none
+			}
+
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-7 .bee-col-1,
+			.bee-row-7 .bee-col-2,
+			.bee-row-7 .bee-col-3 {
+				padding: 20px !important
+			}
+
+			.bee-row-10 .bee-col-1 {
+				padding: 5px 0 !important;
+				margin-bottom: 25px !important
+			}
+
+			.bee-row-14 .bee-col-1 {
+				padding: 5px 10px !important
+			}
+
+			.bee-row-5 .bee-col-2 .bee-block-1,
+			.bee-row-5 .bee-col-2 .bee-block-1 h1,
+			.bee-row-6 .bee-col-2 .bee-block-1,
+			.bee-row-6 .bee-col-2 .bee-block-1 h1 {
+				text-align: center
+			}
+
+			.bee-row-2 .bee-col-1 .bee-block-1 h1 {
+				font-size: 34px
+			}
+
+			.bee-row-4 .bee-col-1 .bee-block-1 h1 {
+				font-size: 28px
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-1 {
+				padding: 10px 0 0 !important
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-1 img {
+				float: none !important;
+				margin: 0 auto !important
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-4,
+			.bee-row-10 .bee-col-2 .bee-block-4 {
+				height: 40px !important
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-6,
+			.bee-row-10 .bee-col-2 .bee-block-6 {
+				padding: 0 !important;
+				font-size: 80px !important
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-7 .bee-button-content {
+				font-size: initial !important;
+				line-height: normal !important;
+				text-align: center !important
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-7 a,
+			.bee-row-10 .bee-col-1 .bee-block-7 span {
+				text-align: center !important;
+				font-size: 22px !important;
+				line-height: auto !important
+			}
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-7 a {
+			background-color: #476cff;
+			border-radius: 4px;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: auto
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-1 h1 {
+			color: #b2b2b2;
+			direction: ltr;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 26px;
+			font-weight: 700;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-4,
+		.bee-row-14 .bee-col-1 .bee-block-6 {
+			color: #ffffff;
+			direction: ltr;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		@media (max-width:620px) {
+			.bee-row-10 .bee-col-2 .bee-block-7 .bee-button-content {
+				font-size: initial !important;
+				line-height: normal !important;
+				text-align: center !important
+			}
+
+			.bee-row-10 .bee-col-2 .bee-block-7 a,
+			.bee-row-10 .bee-col-2 .bee-block-7 span {
+				text-align: center !important;
+				font-size: 22px !important;
+				line-height: auto !important
+			}
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-7 a {
+			background-color: #1234b9;
+			border-radius: 4px;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: auto
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-1 .bee-block-5,
+		.bee-row-14 .bee-col-1 .bee-block-7 {
+			color: #c5c5c5;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-8 {
+			color: #101112;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-15 .bee-col-2 .bee-block-2 {
+			color: #7b7b7b;
+			direction: ltr;
+			font-size: 9px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+	</style>
+	<script async defer src="https://www.google.com/recaptcha/api.js"></script>
+	<script>
+		function onSubmit(token) {
+			for (const form of document.getElementsByClassName("recaptcha-form")) {
+				if (form.checkValidity()) {
+					form.submit();
+				} else {
+					grecaptcha.reset();
+					form.reportValidity();
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-html-block">
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+						<div align="center" id="data" style=" color: #fff; font-weighT: bolD; px; font-family: Arial; background-color: 201119; padding: 1px; margin: ;"></div>
+						<script>
+							// Obtém a data/hora atual
+							var data = new Date();
+
+							// Guarda cada pedaço em uma variável
+							var dia = data.getDate(); // 1-31 
+							var mes = data.getMonth(); // 0-11 (zero=janeiro) 
+							var ano4 = data.getFullYear(); // 4 dígitos 
+
+							// Formata a data e a hora (note o mês + 1)
+							var str_data = dia + '/' + (mes + 1) + '/' + ano4;
+
+							// Mostra o resultado
+							//alert('Hoje é ' + str_data + ' às ' + str_hora);
+
+
+
+							document.getElementById("data").innerHTML = (' <font color="#FFFF00" <="" font=""<span id="address"></span> </font><span id="address"></span>  Desconto só <font color="#FFFF00" <="" font=""<span id="address">HOJE<font color="#FFF" <="" font=""<span id="address"> nessa página <font color="#FFFF00" <="" font=""<span id="address">' + str_data);
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-2 bee-desktop_hide">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1><span class="tinyMce-placeholder">Tenha a mira que sempre sonhou ainda hoje</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-3 bee-desktop_hide">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w1"></div>
+				<div class="bee-col bee-col-2 bee-col-w10">
+					<div class="bee-block bee-block-1 bee-html-block">
+						<link href="https://widget.groovevideo.com/widget/app.css" rel="stylesheet" />
+						<groovevideo-widget id="272529" permalink="A76X3iMMqZh0nlFC0Awc"></groovevideo-widget>
+						<script src="https://widget.groovevideo.com/widget/app.js"></script>
+					</div>
+					<div class="bee-block bee-block-2 bee-html-block">
+						<style>
+							/* BOTAO VERMELHO */
+
+							.call_to_action_red {
+								width: 90%;
+								font-size: 1.4em;
+								font-weight: 700;
+								text-transform: uppercase;
+								text-align: center;
+								padding: 22px 12px;
+								margin: 8px auto 0;
+								box-sizing: border-box;
+								color: #fff;
+								background-image: linear-gradient(to bottom, #e54747 0%, #bb0e31 100%);
+								border: 0;
+								cursor: pointer;
+								border-radius: 5px;
+								display: block;
+								font-family: 'Roboto', sans-serif;
+							}
+
+							.call_to_action_red:hover {
+								color: #fff;
+								background-image: linear-gradient(to bottom, #bb0e31 0%, #e54747 100%)
+							}
+
+							.cta-red {
+								display: block;
+								box-sizing: border-box;
+								text-transform: uppercase;
+								padding: 20px 10px;
+								width: 90%;
+								margin: 0px auto;
+								text-align: center;
+								font-size: 24px;
+								line-height: 36px;
+								font-weight: bold;
+								color: #fff;
+								border-radius: 5px;
+								background: linear-gradient(268deg, #5a0000, #bf0000, #5a0000, #bf0000);
+								background-size: 800% 800%;
+								-webkit-animation: cta 6s ease infinite;
+								-moz-animation: cta 6s ease infinite;
+								-o-animation: cta 6s ease infinite;
+								animation: cta 6s ease infinite;
+								text-decoration: underline;
+								box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
+								-webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
+								-moz-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
+								-o-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75)
+							}
+
+							.cta-red:hover {
+								background-color: #bf0000 !important;
+								background-image: none !important;
+								color: #fff !important
+							}
+
+							.cta-red:focus {
+								background-color: #bf0000 !important;
+								color: #fff !important;
+								background-image: none !important
+							}
+
+							.cta-red:active {
+								background-color: #bf0000 !important;
+								color: #fff !important;
+								background-image: none !important
+							}
+
+							/* REDUTOR DE BOTAO */
+							.apx {
+								max-width: 700px;
+								width: 90%;
+							}
+
+							@-webkit-keyframes cta {
+								0% {
+									background-position: 0% 50%
+								}
+
+								50% {
+									background-position: 100% 51%
+								}
+
+								100% {
+									background-position: 0% 50%
+								}
+							}
+
+							@-moz-keyframes cta {
+								0% {
+									background-position: 0% 50%
+								}
+
+								50% {
+									background-position: 100% 51%
+								}
+
+								100% {
+									background-position: 0% 50%
+								}
+							}
+
+							@-o-keyframes cta {
+								0% {
+									background-position: 0% 50%
+								}
+
+								50% {
+									background-position: 100% 51%
+								}
+
+								100% {
+									background-position: 0% 50%
+								}
+							}
+
+							@keyframes cta {
+								0% {
+									background-position: 0% 50%
+								}
+
+								50% {
+									background-position: 100% 51%
+								}
+
+								100% {
+									background-position: 0% 50%
+								}
+							}
+
+
+							@media only screen and (max-width: 600px) {
+								h1 {
+									font-size: 1.5em;
+								}
+
+								.headline {
+									font-size: 1.5em;
+								}
+
+								.subtitle {
+									font-size: 1em;
+								}
+
+								img {
+									width: 90%;
+								}
+
+								.content {
+									font-size: 16px;
+									/* Tamanho do texto do conteúdo para celular */
+								}
+							}
+						</style>
+						<div class="button-container">
+							<p><a class="cta-red ck-texto apx" href="#preco">
+									SIM, EU QUERO daR FULL VERMELHO</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w1"></div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-4">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1>PARA QUEM É O PAINEL FIX BLUE? </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-5">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/67g/ry9/j2m/6x97rFh2NOHR.webp" style="max-width:300px;" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1>Para quem <span style="color: #e60000;">não aceita mais perder X1</span> para os amigos ou tem dificuldades para jogar as partidas em geral! </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-6 bee-desktop_hide">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/j28/rmo/1j2/IMG_0795-600x335.webp" style="max-width:300px;" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1>Para quem tem uma <span style="color: #e60000;">sensi ruim</span> mesmo tendo uma jogabilidade considerável </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-7 bee-desktop_hide">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/iaw/wox/n5y/746B8E02-F64E-492E-9E16-9A2B9AE1205B-576x1024.png" style="max-width:170px;border-radius:8px;" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/m8e/nru/dls/C5B0AAAA-E5E2-4B69-BBF1-0C82236A749C-636x1024.jpeg" style="max-width:170px;border-radius:8px;" /></div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/upn/a6e/4d0/Design-sem-nome-30-576x1024.png" style="max-width:170px;border-radius:8px;" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-8 bee-mobile_hide">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/m3x/mlh/c1q/BjMlgXzxSqGo.png" style="max-width:300px;" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/tmy/60a/6hs/YYwWDWemnrBk.jpg" style="max-width:300px;" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-9">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+            <!-- CHAMAR ANCORA -->
+						<section id="preco"></section>
+						<h1><span class="tinyMce-placeholder">ESCOLHA SEU PLANO</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-10">
+			<div class="bee-row-content" style="gap:25px;">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/to3/ucg/r80/d2VmNYAWZTos.svg" style="max-width:259px;" /></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h1><span class="tinyMce-placeholder">ACESSO VITALÍCIO</span> </h1>
+					</div>
+					<div class="bee-block bee-block-3 bee-list">
+						<ul start="1">
+							<li>Painel FIX BLUE + GRUPO VIP de clientes;</li>
+							<li>Atualizações de 30 em 30 dias</li>
+							<li>+17 funções para ativar Fora e dentro do Free fire</li>
+						</ul>
+					</div>
+					<div class="bee-block bee-block-4 bee-spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+					<div class="bee-block bee-block-5 bee-paragraph">
+						<p><span style="text-decoration: line-through;">De R$125,00 por APENAS</span></p>
+					</div>
+					<div class="bee-block bee-block-6 bee-paragraph">
+						<p>R$ 9,99</p>
+					</div>
+					<div class="bee-block bee-block-7 bee-button"><a class="bee-button-content" href="https://seguro.minbrand.com/r/NR8HO98OMT" style="font-size: 18px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 18px; line-height: 200%; letter-spacing: normal;">COMPRAR AGORA</span></a></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/to3/ucg/r80/d2VmNYAWZTos.svg" style="max-width:256px;" /></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h1><span class="tinyMce-placeholder">ACESSO SEMANAL</span> </h1>
+					</div>
+					<div class="bee-block bee-block-3 bee-list">
+						<ul start="1">
+							<li>Painel FIX BLUE + GRUPO VIP de clientes;</li>
+							<li>Atualizações de 30 em 30 dias</li>
+							<li>+11 funções para ativar Fora e dentro do Free fire</li>
+						</ul>
+					</div>
+					<div class="bee-block bee-block-4 bee-spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+					<div class="bee-block bee-block-5 bee-paragraph">
+						<p><span style="text-decoration: line-through;">De R$125,00 por APENAS</span></p>
+					</div>
+					<div class="bee-block bee-block-6 bee-paragraph">
+						<p>R$ 4,99</p>
+					</div>
+					<div class="bee-block bee-block-7 bee-button"><a class="bee-button-content" href="https://seguro.minbrand.com/r/QNBY1P4BOE" style="font-size: 18px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 18px; line-height: 200%; letter-spacing: normal;">COMPRAR AGORA</span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-11">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-12">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4"></div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/wdv/5kz/g2a/garantia-7-dias.webp" style="max-width:200px;" /></div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4"></div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-13">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-14">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1><span class="tinyMce-placeholder">PERGUNTAS FREQUENTES</span> </h1>
+					</div>
+					<div class="bee-block bee-block-2 bee-paragraph">
+						<p>COMO RECEBEREI MEU PRODUTO?</p>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p>Você receberá o acesso do PAINEL FIX BLUE pelo seu e-mail, que é colocado no momento que você for realizar a compra.</p>
+					</div>
+					<div class="bee-block bee-block-4 bee-paragraph">
+						<p>FUNCIONA SOMENTE NO CELULAR?</p>
+					</div>
+					<div class="bee-block bee-block-5 bee-paragraph">
+						<p>O PAINEL FIX BLUE funciona no celular e no computador.</p>
+					</div>
+					<div class="bee-block bee-block-6 bee-paragraph">
+						<p>E se eu tiver dúvidas de como usar o PAINEL FIX BLUE?</p>
+					</div>
+					<div class="bee-block bee-block-7 bee-paragraph">
+						<p>Temos um suporte disponível para tirar todas as suas dúvidas.</p>
+					</div>
+					<div class="bee-block bee-block-8 bee-paragraph">
+						<p>I'm a new paragraph block.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-15">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w2"></div>
+				<div class="bee-col bee-col-2 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="https://4b49954148.imgdist.com/pub/bfra/e8dwi2qs/gq6/l3b/2am/minbrand-b.webp" style="max-width:120px;" /></div>
+					<div class="bee-block bee-block-2 bee-paragraph">
+						<p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Todas e quaisquer declarações prospectivas contidas neste site ou em qualquer um de nossos produtos têm a intenção de expressar nossa opinião sobre o potencial de ganhos que algumas pessoas podem alcançar. Mas muitos fatores serão importantes para determinar seus resultados reais, e não garantimos que você obterá resultados semelhantes aos nossos ou aos de qualquer outra pessoa.<br /><br />© 2025 Minbrand - Todos os direitos reservados.<br /><br /><a href="https://sl.minbrand.com/privacidade/" rel="noopener" style="text-decoration: underline;" target="_blank">Política de Privacidade</a> | <a href="https://sl.minbrand.com/termos" rel="noopener" style="text-decoration: underline;" target="_blank">Termos de Serviço</a></p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w2"></div>
+			</div>
+		</div>
+		
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/notiflix@2.6.0/dist/notiflix-aio-2.6.0.min.js"></script>
+
+<script>
+    /right-top, right-bottom, left-top, left-bottom, center-top, center-bottom, center-center/
+    var position = "left-bottom";
+ 
+    /verde, azul, vermelho, amarelo/
+    var color = "verde";
+ 
+    /fade, zoom, from-right, from-left, from-top, from-bottom/
+    var animation = "from-left";
+ 
+    // Nome do produto que será exibido
+    var product_name = "Painel FIX BLUE";
+ 
+    /frase depois do nome da pessoa/
+    var phrase = "acabou de comprar";
+    var timeout = 4000;
+ 
+    /masc, fem, any/
+    var type_name = "masc, fem";
+    var msg_final = "";
+ 
+    var min_time = 4;
+    var max_time = 20;
+ 
+    var names_masc = ['Jose', 'Joao', 'Antonio', 'Francisco', 'Carlos', 'Paulo', 'Pedro', 'Lucas', 'Luiz', 'Marcos', 'Luis', 'Gabriel', 'Rafael', 'Daniel', 'Marcelo', 'Bruno', 'Eduardo', 'Felipe', 'Rodrigo', 'Manoel', 'Mateus', 'Andre', 'Fernando', 'Fabio', 'Leonardo', 'Gustavo', 'Guilherme', 'Leandro', 'Tiago', 'Anderson', 'Ricardo', 'Marcio', 'Jorge', 'Alexandre', 'Roberto', 'Edson', 'Diego', 'Vitor', 'Sergio', 'Claudio', 'Matheus', 'Thiago', 'Geraldo', 'Adriano', 'Luciano', 'Julio', 'Renato', 'Alex', 'Vinicius', 'Rogerio', 'Samuel', 'Ronaldo', 'Mario', 'Flavio', 'Douglas', 'Igor', 'Davi', 'Manuel', 'Jeferson', 'Cicero', 'Victor', 'Miguel', 'Robson', 'Mauricio', 'Danilo', 'Henrique', 'Caio', 'Reginaldo', 'Joaquim', 'Benedito', 'Gilberto', 'Marco', 'Alan', 'Nelson', 'Cristiano', 'Elias', 'Wilson', 'Valdir', 'Emerson', 'Luan', 'David', 'Renan', 'Severino', 'Fabricio', 'Mauro', 'Jonas', 'Gilmar', 'Jean', 'Fabiano', 'Wesley', 'Diogo', 'Adilson', 'Jair', 'Alessandro', 'Everton', 'Osvaldo', 'Gilson', 'Willian', 'Joel', 'Silvio', 'Helio', 'Maicon', 'Reinaldo', 'Pablo', 'Artur', 'Vagner', 'Valter', 'Celso', 'Ivan', 'Cleiton', 'Vanderlei', 'Vicente', 'Arthur', 'Milton', 'Domingos', 'Wagner', 'Sandro', 'Moises', 'Edilson', 'Ademir', 'Adao', 'Evandro', 'Cesar', 'Valmir', 'Murilo', 'Juliano', 'Edvaldo', 'Ailton', 'Junior', 'Breno', 'Nicolas', 'Ruan', 'Alberto', 'Rubens', 'Nilton', 'Augusto', 'Cleber', 'Osmar', 'Nilson', 'Hugo', 'Otavio', 'Vinicios', 'Italo', 'Wilian', 'Alisson', 'Aparecido'];
+    var names_fem = ['Maria', 'Ana', 'Francisca', 'Antonia', 'Adriana', 'Juliana', 'Marcia', 'Fernanda', 'Patricia', 'Aline', 'Sandra', 'Camila', 'Amanda', 'Bruna', 'Jessica', 'Leticia', 'Julia', 'Luciana', 'Vanessa', 'Mariana', 'Gabriela', 'Vera', 'Vitoria', 'Larissa', 'Claudia', 'Beatriz', 'Rita', 'Luana', 'Sonia', 'Renata', 'Eliane'];
+ 
+    var option = {
+        position: position,
+        cssAnimationStyle: animation,
+        plainText: false,
+        timeout: timeout
+    };
+ 
+    function show_notification() {
+        if (type_name == "masc") {
+            msg_final = "<strong>" + names_masc[Math.floor(Math.random() * names_masc.length)] + "</strong>";
+        } else if (type_name == "fem") {
+            msg_final = "<strong>" + names_fem[Math.floor(Math.random() * names_fem.length)] + "</strong>";
+        } else {
+            var array_aux = ["masc", "fem"];
+ 
+            if (array_aux[Math.floor(Math.random() * array_aux.length)] == "masc") {
+                msg_final = "<strong>" + names_masc[Math.floor(Math.random() * names_masc.length)] + "</strong>";
+            } else {
+                msg_final = "<strong>" + names_fem[Math.floor(Math.random() * names_fem.length)] + "</strong>";
+            }
+        }
+ 
+        msg_final += decodeURIComponent(escape(" " + phrase + " " + product_name));
+ 
+        if (color == "verde") {
+            Notiflix.Notify.Success(msg_final, option);
+        }
+ 
+        if (color == "azul") {
+            Notiflix.Notify.Info(msg_final, option);
+        }
+ 
+        if (color == "vermelho") {
+            Notiflix.Notify.Failure(msg_final, option);
+        }
+ 
+        if (color == "amarelo") {
+            Notiflix.Notify.Warning(msg_final, option);
+        }
+ 
+        var rand = Math.floor(Math.random() * (max_time - min_time + 1) + min_time);
+        setTimeout(show_notification, rand * 1000);
+    }
+    setTimeout(show_notification, 4 * 1000);
+</script>
+
+
+
+
+<script id="wpcp_disable_selection" type="text/javascript">
+	var image_save_msg='You are not allowed to save images!';
+		var no_menu_msg='Context Menu disabled!';
+		var smessage = "Content is protected !!";
+	
+	function disableEnterKey(e)
+	{
+		var elemtype = e.target.tagName;
+		
+		elemtype = elemtype.toUpperCase();
+		
+		if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED")
+		{
+			elemtype = 'TEXT';
+		}
+		
+		if (e.ctrlKey){
+		 var key;
+		 if(window.event)
+			  key = window.event.keyCode;     //IE
+		 else
+			  key = e.which;     //firefox (97)
+		//if (key != 17) alert(key);
+		 if (elemtype!= 'TEXT' && (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43 || key == 73))
+		 {
+			if(wccp_free_iscontenteditable(e)) return true;
+			show_wpcp_message('You are not allowed to copy content or view source');
+			return false;
+		 }else
+			 return true;
+		 }
+	}
+	
+	
+	/*For contenteditable tags*/
+	function wccp_free_iscontenteditable(e)
+	{
+		var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+		  
+		var target = e.target || e.srcElement;
+	
+		var elemtype = e.target.nodeName;
+		
+		elemtype = elemtype.toUpperCase();
+		
+		var iscontenteditable = "false";
+			
+		if(typeof target.getAttribute!="undefined" ) iscontenteditable = target.getAttribute("contenteditable"); // Return true or false as string
+		
+		var iscontenteditable2 = false;
+		
+		if(typeof target.isContentEditable!="undefined" ) iscontenteditable2 = target.isContentEditable; // Return true or false as boolean
+	
+		if(target.parentElement.isContentEditable) iscontenteditable2 = true;
+		
+		if (iscontenteditable == "true" || iscontenteditable2 == true)
+		{
+			if(typeof target.style!="undefined" ) target.style.cursor = "text";
+			
+			return true;
+		}
+	}
+	
+	////////////////////////////////////
+	function disable_copy(e)
+	{	
+		var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+		
+		var elemtype = e.target.tagName;
+		
+		elemtype = elemtype.toUpperCase();
+		
+		if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED")
+		{
+			elemtype = 'TEXT';
+		}
+		
+		if(wccp_free_iscontenteditable(e)) return true;
+		
+		var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+		
+		var checker_IMG = '';
+		if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
+		if (elemtype != "TEXT")
+		{
+			if (smessage !== "" && e.detail == 2)
+				show_wpcp_message(smessage);
+			
+			if (isSafari)
+				return true;
+			else
+				return false;
+		}	
+	}
+	
+	//////////////////////////////////////////
+	function disable_copy_ie()
+	{
+		var e = e || window.event;
+		var elemtype = window.event.srcElement.nodeName;
+		elemtype = elemtype.toUpperCase();
+		if(wccp_free_iscontenteditable(e)) return true;
+		if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
+		if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+		{
+			return false;
+		}
+	}	
+	function reEnable()
+	{
+		return true;
+	}
+	document.onkeydown = disableEnterKey;
+	document.onselectstart = disable_copy_ie;
+	if(navigator.userAgent.indexOf('MSIE')==-1)
+	{
+		document.onmousedown = disable_copy;
+		document.onclick = reEnable;
+	}
+	function disableSelection(target)
+	{
+		//For IE This code will work
+		if (typeof target.onselectstart!="undefined")
+		target.onselectstart = disable_copy_ie;
+		
+		//For Firefox This code will work
+		else if (typeof target.style.MozUserSelect!="undefined")
+		{target.style.MozUserSelect="none";}
+		
+		//All other  (ie: Opera) This code will work
+		else
+		target.onmousedown=function(){return false}
+		target.style.cursor = "default";
+	}
+	//Calling the JS function directly just after body load
+	window.onload = function(){disableSelection(document.body);};
+	
+	//////////////////special for safari Start////////////////
+	var onlongtouch;
+	var timer;
+	var touchduration = 1000; //length of time we want the user to touch before we do something
+	
+	var elemtype = "";
+	function touchstart(e) {
+		var e = e || window.event;
+	  // also there is no e.target property in IE.
+	  // instead IE uses window.event.srcElement
+		  var target = e.target || e.srcElement;
+		
+		elemtype = window.event.srcElement.nodeName;
+		
+		elemtype = elemtype.toUpperCase();
+		
+		if(!wccp_pro_is_passive()) e.preventDefault();
+		if (!timer) {
+			timer = setTimeout(onlongtouch, touchduration);
+		}
+	}
+	
+	function touchend() {
+		//stops short touches from firing the event
+		if (timer) {
+			clearTimeout(timer);
+			timer = null;
+		}
+		onlongtouch();
+	}
+	
+	onlongtouch = function(e) { //this will clear the current selection if anything selected
+		
+		if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "EMBED" && elemtype != "OPTION")	
+		{
+			if (window.getSelection) {
+				if (window.getSelection().empty) {  // Chrome
+				window.getSelection().empty();
+				} else if (window.getSelection().removeAllRanges) {  // Firefox
+				window.getSelection().removeAllRanges();
+				}
+			} else if (document.selection) {  // IE?
+				document.selection.empty();
+			}
+			return false;
+		}
+	};
+	
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		window.addEventListener("touchstart", touchstart, false);
+		window.addEventListener("touchend", touchend, false);
+	});
+	
+	function wccp_pro_is_passive() {
+	
+	  var cold = false,
+	  hike = function() {};
+	
+	  try {
+		  const object1 = {};
+	  var aid = Object.defineProperty(object1, 'passive', {
+	  get() {cold = true}
+	  });
+	  window.addEventListener('test', hike, aid);
+	  window.removeEventListener('test', hike, aid);
+	  } catch (e) {}
+	
+	  return cold;
+	}
+	/*special for safari End*/
+	</script>
+	<script id="wpcp_disable_Right_Click" type="text/javascript">
+	document.ondragstart = function() { return false;}
+		function nocontext(e) {
+		   return false;
+		}
+		document.oncontextmenu = nocontext;
+	</script>
+	<style>
+	.unselectable
+	{
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	cursor: default;
+	}
+	html
+	{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	</style>
+	<script id="wpcp_css_disable_selection" type="text/javascript">
+	var e = document.getElementsByTagName('body')[0];
+	if(e)
+	{
+		e.setAttribute('unselectable',"on");
+	}
+	</script>
+
+    
+</body>
+
+</html>
