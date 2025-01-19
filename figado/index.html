@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="INDEX, FOLLOW">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      background-color: #191919;
+      /* BACKGROUND COLOR */
+    }
+
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    .header-image {
+      font-size: 0px;
+    }
+
+
+    .main {
+      border: solid;
+      border-width: 0px;
+      border-color: #000000;
+      background-color: #FFFFFF;
+      padding: 0px;
+      margin: auto;
+      max-width: 940px;
+    }
+
+    .content {
+      padding: 30px;
+      vertical-align: top;
+      text-align: left;
+      font-size: 22px;
+    }
+
+    /* ADDITIONAL STYLING */
+    .headline {
+      font-family: Tahoma;
+      font-size: 56px;
+      color: #CC0000;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .headlinetopo {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 28px;
+      color: #000000;
+      text-align: center;
+    }
+
+
+    .orderform {
+    padding: 30px;
+    border: 2px dashed #919191;
+    border-radius: 5px;
+    background-color: #FDFBDD;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.orderform img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.orderform strong {
+    font-size: 1.25rem;
+}
+
+.orderform .checkmarkRed ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+.checkmarkRed li {
+    background-image: url(images/check1.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    padding-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+    .title_text {
+      font-family: Tahoma, Verdana, Arial;
+      font-size: 14px;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .main_text {
+      font-family: Verdana;
+      font-size: 12px;
+      color: #000000;
+    }
+
+    .text1 {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #000000;
+      margin: 0px;
+    }
+
+    .text2 {
+      font-family: Tahoma, Verdana, Arial;
+      font-size: 16px;
+      font-weight: bold;
+      color: #666666;
+      margin: 0px;
+    }
+
+    .text3 {
+      font-family: Tahoma, Verdana, Arial;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000000;
+      margin: 0px;
+    }
+
+    .title_text {
+      font-family: Tahoma, Verdana, Arial;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .text {
+      font-family: Tahoma, Verdana, Arial;
+      font-size: 10px;
+    }
+
+    .style12 {
+      font-size: 28pt;
+      font-weight: bold;
+      color: #CC0000;
+      text-align: center;
+    }
+
+    .block-9 {
+      padding: 40px;
+      background: url(./images/bg-gord.png) center no-repeat;
+      background-size: cover;
+    }
+
+    .block-9 h2 {
+      font-size: 36px;
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+      color: #333;
+      font-weight: 700;
+      line-height: 40px;
+      padding: 0 0 30px;
+    }
+
+
+    .block-9 .textBlock {
+      padding: 40px 30px 20px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+
+    .block-14 {
+      background-color: rgb(255, 252, 237);
+      border: 2px dashed rgb(208, 0, 0);
+      margin: 0 50px;
+      border-radius: 6px;
+      padding: 50px 50px 30px;
+    }
+
+    .block-14 h2 {
+      font-size: 40px;
+      color: rgb(193, 0, 0);
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      line-height: 46px;
+      padding: 0 0 30px;
+    }
+
+    .block-14 .img22 {
+      width: 30%;
+      float: left;
+      margin: 0 30px 30px 0;
+    }
+
+    .block-14 p {
+      padding: 0 0 25px;
+    }
+
+    .auto-style1 {
+      background-color: #FFFF00;
+    }
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* oferta flutuante */
+
+
+
+
+
+    #sticky-offer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    #sticky-offer.hidden {
+      display: none;
+    }
+
+    .offer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 700px;
+      /* Limita a largura máxima no desktop */
+      margin: 0 auto;
+    }
+
+    .offer-details {
+      flex-grow: 1;
+      text-align: center;
+      /* Centraliza o texto e o tempo */
+      padding-right: 10px;
+    }
+
+    .offer-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .countdown {
+      font-size: 20px;
+      /* Diminuído o tamanho da fonte do tempo */
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #f7c600, #f7b700);
+      /* Degradê de amarelo mostarda */
+      color: #000;
+      /* Texto preto */
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      /* Texto em negrito */
+      margin-left: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      /* Remove o sublinhado */
+      position: relative;
+      overflow: hidden;
+      animation: oscillate 2s infinite;
+      /* Animação contínua */
+    }
+
+    /* Animação de oscilação */
+    @keyframes oscillate {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media (max-width: 768px) {
+      #sticky-offer {
+        padding: 10px 5px;
+      }
+
+      .offer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .offer-details {
+        padding-right: 0;
+      }
+
+      .cta-button {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 95%;
+        /* Ajusta o botão para ocupar 95% da largura da tela */
+        max-width: 300px;
+      }
+      .orderform{
+        padding: 15px;
+      }
+    
+      .style12 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .highlight {
+    font-weight: bold;
+    background-color: rgb(255, 255, 153) !important;
+}
+
+    /* Ajuste para telas menores de 320 pixels */
+    @media (max-width: 376px) {
+      .headlinetopo {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+      }
+
+      .block-9 {
+        padding: 40px 20px;
+      }
+
+      .block-9 h2 {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+
+      .block-14 {
+        margin: 0 20px;
+        padding: 20px;
+      }
+
+      .block-14 h2 {
+        font-size: 35px;
+        line-height: 45px;
+        padding: 20px 0 20px;
+      }
+
+      .block-14 .img22 {
+        width: 200px;
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+      }
+
+      .headline {
+
+        font-size: 24px;
+      }a
+
+      .headlinetopo2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        text-align: center;
+      }
+
+      .optin-text {
+        font-size: 5vw !Important;
+      }
+
+      .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        max-width: 90%;
+        /* Ajusta o máximo da largura do botão */
+        box-sizing: border-box;
+        /* Inclui o padding e a borda na largura total */
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+    /* ADDITIONAL STYLING */
+    @media only screen and (max-width:480px) {
+
+      /* For mobile phones: */
+      html,
+      body {
+        font-size: 5vw;
+      }
+
+      .content {
+        padding: 10px;
+        font-size: 18px;
+      }
+
+
+
+      .block-9 {
+        padding: 40px 20px;
+      }
+
+      .block-9 h2 {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+
+      .block-14 {
+        margin: 0 20px;
+        padding: 20px;
+      }
+
+      .block-14 h2 {
+        font-size: 35px;
+        line-height: 45px;
+        padding: 20px 0 20px;
+      }
+
+      .block-14 .img22 {
+        width: 200px;
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+      }
+
+      .headline {
+
+        font-size: 24px;
+      }
+
+      .headlinetopo {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+      }
+
+      .optin-text {
+        font-size: 5vw !Important;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <!--Main -->
+    <div class="main">
+      <!--Main -->
+      <div class="header-image">
+        <img src="images/topo.webp" width="940">
+      </div>
+      <!--Main Content -->
+      <div class="content">
+        <!-- SUPER OFERTA -->
+        <div class="headlinetopo">
+          <b>
+            - Essa Informação Precisa <u><strong>Chegar a Todos</strong></u> -
+          </b>
+        </div>
+        <p align="center" class="headline">Um método Simples e Prático <strong style="color: #000;"><u>Cientificamente Comprovado</u></strong> Para Eliminar a Gordura
+          No Fígado De <strong><u>Forma Natural</u></strong></p>
+
+        <div class="headlinetopo2" align="center">
+          <b>
+            Tenha Mais Saúde, Ganhe Anos de Vida e Evite Doenças Como Câncer, Diabetes, Colesterol Alto, Fadiga, Depressão, Confusão Mental, Entre Muitas Outras.
+          </b>
+        </div>
+        <div class="content">
+        <hr>
+        <!-- FIM DA SUPER OFERTA-->
+     
+            <p>Olá,</p>
+            <p>Se você está lendo esse artigo, <strong>talvez tenha sido
+                        diagnosticado</strong> ou <strong>suspeite que tem problemas</strong> com seu
+                  fígado, então <strong>está no lugar certo.</strong></p>
+            <p><strong>Já passei por isso,</strong> e vou te contar como reverti completamente meu
+                  fígado gorduroso, <strong>acabei com as dores nas articulações</strong>,
+                  eliminei a fadiga e ainda perdi <strong>peso de forma natural.</strong></p>
+
+                  <h2 class="style12">E o melhor, consegui fazer
+                    isso seguindo um cronograma de tratamento de 28 dias sem uso de remédios, seguindo esse antigo método
+                    pouco divulgado, por motivos que você vai entender daqui a pouco.</h2>
+
+                    <p>Então, se você tem algum desses sintomas abaixo, continue lendo.</p>
+                    <blockquote>
+                      <p align="left"><strong>
+                        <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                        Você costuma se sentir cansado ou fraco? <br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font>
+                          Sente dor nas costas, dor no abdômen ou desconforto no tronco inferior? <br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                          Você já se sentiu enjoado ou sem apetite?<br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                          Sua pele ou a parte branca dos seus olhos parecem amareladas?<br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                          Está acima do peso e não consegue emagrecer?<br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                          Está com a pele ruim e simplesmente não sabe o porquê?<br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                          Sente um mal-estar geral e não consegue descobrir o que pode ser? <br>
+                          <br>
+                          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+                          A Sente fome e, como resultado, come constantemente alimentos açucarados e ricos em massas?
+                        </strong>...</p>
+                    </blockquote>
+
+          <h2 class="style12">Se você <span class="highlight">respondeu SIM</span> para alguma
+            das perguntas, esse artigo foi feito para você. Dedique seus próximos 10 minutos à leitura dessas informações</h2>
+            <div align="center"><img src="images/boxshadow2.png"></div>
+            <p><img class="expert" alt="expert" src="images/joana-300x298.webp" loading="lazy" style="float:left; max-width: 400px !important;"></p>
+            <p><strong>Joana Sanches, tem 36 anos,</strong>&nbsp;é professora e apaixonada pela vida.</p> 
+            <p>Aos 18 anos, perdeu
+                  o pai para o câncer no fígado. </p><p><strong>Inspirados na história dela, criamos o
+                        programa Fígado Restaurado.</strong></p>
+            <p>Em 2012, ela foi&nbsp;<strong>diagnosticada com fígado gorduroso</strong>, o que, para ser
+                  sincera, me chocou bastante.</p>
+            <p>Eu nunca fui o que você consideraria gorda,&nbsp;<em>(mas ganhei muitos quilos depois desse
+                        diagnóstico, já já mostro uma foto).</em>&nbsp;</p>
+            <p><strong>Sempre presumi que minha dieta era boa</strong>&nbsp;e que meu&nbsp;<strong>fígado era
+                        saudável</strong>, mas descobri que estava errada da&nbsp;<strong>pior maneira
+                        possível.</strong></p>
+
+
+
+                        <h2 class="style12"><strong>Certa manhã,</strong>&nbsp;acordei com uma dor estranha no abdômen.
+                          Achei que talvez tivesse distendido um músculo, já que tinha feito uma faxina pesada em
+                          casa no dia anterior.</h2>
+                    <p>Ignorei na hora, tomei um analgésico, mas no mês seguinte a dor ficou mais intensa e se espalhou para o meu ombro direito. &nbsp;<strong>Nesse ponto, tudo parecia uma bola de neve…</strong></p>
+                    <p><strong>Comecei a ter problemas para dormir</strong>, o que me deixava cansada e fatigada, comecei a dar
+                          desculpas para não ir ao trabalho, não conseguia dar atenção aos meus
+                          pacientes.</p>
+                    <p>Então o ganho de peso começou e,&nbsp;<strong>antes que eu percebesse</strong>, estava
+                          com&nbsp;<strong>incríveis 78 quilos</strong>&nbsp;em 1,60m de altura.
+                    </p>
+                    <p><em>Veja abaixo uma foto minha de 2015 (na pior fase da doença) e do lado direito em
+                                2022&nbsp;<strong><u>com meu fígado restaurado.</u></strong></em></p>
+
+                              </div></div>
+
+                              <div class="header-image">
+                                <img src="images/virada.webp" loading="lazy" width="940">
+                              </div> 
+                 
+
+                    <div class="content">
+                    <p>Eu me sentia lenta e inchada o tempo todo,&nbsp;<strong>como se minha comida não estivesse sendo
+                                digerida.</strong></p>
+                    <p>Nenhuma das minhas roupas servia mais, e nesse mesmo período&nbsp;<strong>fui diagnosticada com
+                                depressão.</strong></p>
+
+                                <h2 align="center" class="style12">Pior ainda, minha pele&nbsp;<strong>começou a ter erupções
+                                  cutâneas nas mãos</strong>, que descobri mais tarde serem uma forma
+                            de&nbsp;<strong>eczema de baixo grau.</strong></h2>
+                      <p><strong>Eu sabia que algo estava errado,</strong> porque honestamente nunca me senti tão mal
+                            na minha vida.</p>
+                      <p>Mas quando fui ver meu médico,&nbsp;<strong>ele também não me deu nenhum
+                                  diagnóstico conclusivo.</strong></p>
+                      <p>Acabei passando por uma bateria de exames de sangue, raios-X, e uma tomografia muito cara
+                            para&nbsp;<strong>finalmente chegar a um diagnóstico inicial.</strong></p>
+                      <h2 class="style12">Esteatose não alcoólica (NASH)</h2>
+
+                    </div>
+
+                    <div class="header-image">
+                      <img src="images/gordura-no-figado_29111_l.webp" loading="lazy" width="940">
+                    </div> 
+       
+
+          <div class="content">
+                      
+                      <p><strong>Esta é a forma mais grave de fígado gorduroso.</strong>&nbsp;</p>
+                      <p>Não sei se você sabe, mas&nbsp;<strong>existem três tipos principais de doença
+                                  hepática</strong>&nbsp;gordurosa que as pessoas adquirem…</p>
+                      <h2>Doença hepática gordurosa não alcoólica (NAFLD)</h2>
+                      <p>Também conhecida como doença hepática gordurosa “simples”, a NAFLD
+                            é a mais comum e é o que a maioria das pessoas tem. É causada principalmente por
+                            uma dieta pobre e exposição a toxinas ambientais, como poluição e
+                            pesticidas.</p>
+                      <h2>Doença hepática gordurosa alcoólica (AFLD)</h2>
+                      <p>A AFLD é causada principalmente pelo consumo excessivo de álcool, que literalmente mata o
+                            fígado e substitui as células saudáveis ​​por depósitos de gordura.</p>
+                      <h2>Esteatose não alcoólica (NASH)</h2>
+                      <p>Esta é a forma mais grave de fígado gorduroso, porque significa que&nbsp;<strong>algumas
+                                  cicatrizes já ocorreram</strong>. Se não for tratada, pode se transformar em
+                            cirrose mortal e até câncer de fígado,&nbsp;<strong>então meu médico
+                                  não estava brincando quando disse que isso poderia me matar.</strong></p>
+
+
+
+
+                                  <h2 align="center">O que é assustador é que quase 1/3 da população mundial
+                                    é afetada por pelo menos um deles.</h2>
+                              <p>O que significa que há uma grande chance de você ter fígado
+                                    gorduroso,&nbsp;<strong>mesmo que nunca tenha sido diagnosticado formalmente.</strong></p><img src="images/ministerio-da-saude.webp" alt="virada de vida" loading="lazy">
+                              <h2 align="center"><strong><u>A boa notícia é que</u></strong>, em 97% dos casos, o fígado
+                                    gorduroso é&nbsp;<strong><u>uma condição reversível</u></strong>, se a
+                                    causa for tratada, mas infelizmente os médicos tratam apenas os sintomas.</h2>
+                              <h3 style="text-align: center; color: #ff0000;">E isso porque, durante meus estudos, descobri que o
+                                    fígado desempenha um&nbsp;<strong>PAPEL ABSOLUTAMENTE CRUCIAL</strong>&nbsp;na perda de peso.
+                              </h3>
+                              <p>Uma das principais funções do seu fígado é&nbsp;<strong>quebrar a gordura e
+                                          transformá-la em energia</strong>, mas quando não está funcionando
+                                    corretamente, simplesmente não consegue lidar com o excesso de gordura e açúcar,
+                                    o que resulta no acúmulo de gordura em todas as partes erradas do seu corpo.</p>
+                              <p><strong>É por isso que suas dietas falham.</strong></p>
+                              <h2 style="text-align: center;">É uma situação complicada, e a maioria dos
+                                    médicos simplesmente&nbsp;<strong><u>não tem conhecimento
+                                                nutricional</u></strong>&nbsp;e treinamento para resolvê-la.</h2>
+                              
+                              <!-- <div class="header-image">
+                                <img src="images/1150x219-header.webp" width="940">
+                              </div> -->
+      
+
+
+      <section class="block-9">
+        <div class="textBlock">
+          <h2>O Fígado é o órgão mais importante do nosso corpo depois do cérebro.</h2>
+        </div>
+      </section>
+      <p class="style12">Ele executa mais de 800 funções importantíssimas, incluindo...</p>
+
+      <blockquote>
+        <p align="left"><strong>
+          <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+          Eliminar toxinas do corpo</strong>, como poluentes ambientais, aditivos alimentares,
+        células mortas, álcool, etc. <br>
+            <br>
+            <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font>
+            Produção de bile,</strong>&nbsp;que ajuda a eliminar os resíduos e a
+        quebrar as gorduras<br>
+            <br>
+            <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+            Armazenar e liberar&nbsp;</strong>glicose para energia<br>
+            <br>
+            <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+            Limpar o sangue</strong>&nbsp;de substâncias nocivas<br>
+            <br>
+            <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+            Resistir a infecções</strong>&nbsp;removendo bactérias da corrente
+        sanguínea<br>
+            <br>
+            <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+            Eliminação da bilirrubina</strong>&nbsp;(se houver acúmulo de
+        bilirrubina, a pele e os olhos ficam amarelos)<br>
+            <br>
+            <font color="#CC0000"><img src="images/check3.png" width="24" height="23" align="absmiddle"></font> 
+            E muito mais</strong>, incluindo a regulação da glicose, pressão
+        arterial, açúcar no sangue, insulina, estrogênio, testosterona, sistema
+        imunológico e produção de colesterol no sangue.<br>
+            <br>
+            
+      </blockquote>
+
+<h2 class="style12">“Se há UM órgão que&nbsp;<strong><u>você deve
+              cuidar,</u></strong>&nbsp;é o seu FÍGADO! ”</h2>
+<p>Na verdade, a típica dieta moderna repleta de alimentos processados, produtos químicos,
+  açúcar e álcool levou a taxas alarmantes de obesidade e é a razão
+  número 1 para o aumento dos casos de “fígado gorduroso”.</p>
+<p>Essencialmente, seu fígado fica cheio de gordura, inflamado e aumentado e não consegue mais
+  fazer seu trabalho adequadamente.</p>
+<h2 style="text-align: center;">Então, em vez de seu fígado&nbsp;<strong>eliminar as
+        toxinas</strong>, ele começa a&nbsp;<strong><u>ENVENENAR você.</u></strong></h2>
+<img src="images/sdfsd.webp" alt="virada de vida" loading="lazy" width="100%">
+
+
+ <h2 align="center">“E hoje, vou mostrar a você uma maneira&nbsp;<strong>TOTALMENTE
+                        NATURAL</strong>&nbsp;de&nbsp;<strong>&nbsp;REVERTER</strong>&nbsp;os efeitos prejudiciais de um
+                  fígado gordo, para que você possa perder peso, se sentir bem e parecer anos mais
+                  jovem!”</h2>
+            <ul>
+                  <li><strong>Reverter a inflamação e os danos ao fígado.</strong> Se não
+                        for controlada, pode levar a uma série de doenças, incluindo câncer de
+                        fígado ou cirrose (os que sofrem dessas condições têm uma expectativa
+                        de vida extremamente baixa)…</li>
+                  <li><strong>Transformar seu corpo em uma fornalha</strong>&nbsp;de queima de gordura e PERDER PESO
+                        rapidamente e sem esforço&nbsp;<em>(seu fígado é a chave para perder peso
+                              e, assim que você destrancar a porta, os quilos vão derreter
+                              facilmente)…</em></li>
+                  <li><strong>Eliminar seus problemas de saúde na FONTE</strong>&nbsp;(o fato é que muitas
+                        das suas queixas de saúde agora podem ser atribuídas a um fígado com baixo
+                        desempenho. Faça seu fígado funcionar corretamente e sua saúde
+                        melhorará drasticamente)…</li>
+                  <li><strong>Dê ao seu fígado o Ultimate DETOX</strong>&nbsp;e elimine o acúmulo de
+                        toxinas perigosas que estão arruinando sua saúde…</li>
+                  <li><strong>Reduzir o risco de contrair doenças potencialmente fatais</strong>, como ataques
+                        cardíacos, derrame, diabetes, câncer, cirrose hepática e muito mais –
+                        e adicione ANOS à sua expectativa de vida…</li>
+                  <li><strong>Obter uma PELE MAIS LIMPA E SUAVE</strong>&nbsp;removendo as toxinas do fígado e
+                        livre-se também das descolorações irregulares e escuras da pele…
+                  </li>
+                  <li><strong>Aumentar os níveis de vitalidade e ENERGIA</strong>&nbsp;, e sinta-se como um
+                        adolescente novamente!</li>
+                  <li>Elimine a “névoa cerebral” e melhore a CLAREZA MENTAL e a
+                        concentração…</li>
+                  <li><strong>VENÇA A DEPRESSÃO</strong>&nbsp;e desfrute de um renovado entusiasmo pela
+                        vida (passar pela vida sentindo-se cansado, fraco e sem energia é uma das principais
+                        causas da depressão)…</li>
+                  <li><strong>Melhorar o seu SONO</strong>&nbsp;e sinta-se energizado e revigorado todas as
+                        manhãs…</li>
+                  <li><strong>Finalmente acabe com os inchaços</strong>, cãibras e DOR abdominal …
+                  </li>
+            </ul>
+            <h2 align="center"><strong>Economize milhares de reais em medicamentos</strong>, analgésicos e outros
+                  tratamentos, que estão&nbsp;<strong>apenas “mascarando” os
+                        sintomas</strong>&nbsp;de sua saúde, mas não fazendo NADA para consertar a
+                  causa.&nbsp;<strong><u>Saia Definitivamente Desse Ciclo De Doenças.</u></strong></h2><img src="images/zzxcx-768x713.webp" width="100%" loading="lazy" alt="interno">
+            <h2 style="text-align: center;">Talvez você esteja pensando: “Não como comidas processadas,
+                  glúten ou açúcar…”</h2>
+            <p>Bom, saiba que os produtos estampados como “Saudáveis” ou “Integral” podem ser
+                  piores. Dentro do&nbsp;<a href="#" rel="noopener" target="_blank"><strong><u>PROGRAMA FÍGADO
+                                    RESTAURADO</u></strong></a>, mostro tudo isso em detalhes.</p>
+            <h2 class="style12">Você não tem ideia de como é
+                  enganado,&nbsp;<strong><u>por esse tipo de produto!</u></strong></h2>
+            <h3 style="text-align: center;">As indústrias Alimentícias e Farmacêutica pertencem aos mesmos grupos.&nbsp;<strong><u>Fabricam as doenças para vender
+                              solução.</u></strong></h3>
+                              <p>Depois que eu iniciei meu tratamento buscando por remédios naturais e simples mudanças de hábitos alimentares, a minha vida mudou</p>
+                              <p>Após alguns dias eu já via os sinais aparecendo</p>
+                              <p>E com poucas semanas eu já era outra pessoa</p>
+                              <section class="block-14">
+                  ✅ <strong>Eu estava cheio&nbsp;</strong>de ENERGIA e VITALIDADE.</br>
+                  ✅ <strong>Eu estava dormindo profundamente</strong>&nbsp;e acordando com os olhos brilhantes e
+                        ansioso para começar o dia.</br>
+                  ✅ <strong>Eu estava ALERTA E FOCADO</strong>&nbsp;no trabalho, sem problemas de
+                        concentração. (Na verdade, recebi uma promoção e um aumento de
+                        salário 6 meses após iniciar meu curso de Nutrição!)</br>
+                  ✅ <strong>Minha pele voltou a ficar MAIS CLARA</strong>, SUAVE E SEM MANCHAS , o que transformou
+                        meus níveis de confiança e autoestima.</br>
+                  ✅ <strong>O branco dos meus olhos</strong>&nbsp;voltou à sua cor normal e saudável.
+                  </br>
+                  ✅ <strong>E depois de me ver presa</strong>&nbsp;em seu quarto com depressão, um grande
+                        sorriso no rosto e cheia de energia, meu médico concordou que EU NÃO PRECISAVA
+                        MAIS DE ANTIDEPRESSIVOS!</br>
+            </section>
+            <h2 style="text-align: center;"><strong>“Quando voltei para ver meu médico</strong>, ele
+                  não podia acreditar em seus olhos!”</h2>
+            <p>Ele meio que sem entender admitiu que&nbsp;<strong>eu não tinha mais o fígado
+                        gorduroso</strong>&nbsp;que ele mesmo havia diagnosticado.</p>
+            <p><strong>Meus níveis de enzimas hepáticas voltaram ao normal,</strong>&nbsp;meu
+                  fígado estava livre de inflamações e de volta ao normal, e eu literalmente
+                  não me senti melhor em toda a minha vida.</p>
+            <p><strong>Curioso sobre o que fiz</strong>, ele me perguntou&nbsp;<strong>o que eu tinha
+                        tomado.</strong></p>
+            <p><strong>Eu disse:</strong> “<em>Nada, apenas me reeduquei, estudei e tratei a causa do
+                        problema.”</em></p>
+            <p><strong><u>Sua resposta foi me dar parabéns.</u></strong></p>
+            <h2 style="text-align: center;">Foi nesse momento que percebi quantas pessoas podem estar naquele mesmo
+                  consultório,&nbsp;<strong>perdendo tempo, dinheiro e, pior, anos de vida</strong></h2>
+            <p><strong>Foi quando resolvi empacotar esse conhecimento</strong>&nbsp;que é tão simples, mas
+                  infelizmente não é divulgado, pois afeta interesses de grandes corporações.
+            </p>
+            <p>Não fiz nutrição pensando em clinicar na área, sou feliz com a psicologia, mas
+                  queria levar essas informações adiante e poder ajudar mais pessoas.</p>
+            <p><strong>Comecei a compartilhar com o público através da internet,</strong>&nbsp;tentei fazer
+                  isso em grupos no Facebook, mas misteriosamente esses grupos eram excluídos sem motivo
+                  aparente.</p>
+            <h2 style="text-align: center;">Imaginei que estava&nbsp;<strong>incomodando alguém!</strong></h2>
+            <p><strong>Por isso resolvi criar esse tratamento em uma área de membros</strong>, onde eu poderia
+                  passar todas as orientações do tratamento e estar disponível para o suporte com
+                  minha equipe.</p>
+            <p>Mas também quero que isso chegue ao maior número de pessoas possível, por
+                  isso&nbsp;<strong>resolvi cobrar um valor praticamente simbólico</strong>&nbsp;para cobrir os
+                  custos dessa área de membros,&nbsp;<strong>do site e do tempo dedicado ao suporte.</strong></p>
+           
+
+
+
+
+
+
+
+      <div id="trigger-point"></div>
+      <div class="orderform">
+        <div align="center">
+            <img src="images/pre-pferta.webp" alt="Secure Order Form">
+        </div>
+        <p><strong><span style="color:#cc0000"><img src="images/sales-check-green.png"
+                style="float:left; height:51px; margin-left:10px; margin-right:10px; width:54px" /></span></strong>
+              Acesse todo tratamento fígado restaurado para iniciar agora seu tratamento e conseguir recuperar a saúde do seu fígado</p>
+        <p><br />
+          <strong><span style="color:#cc0000"><img src="images/sales-check-green.png"
+                style="float:left; height:51px; margin-left:10px; margin-right:10px; width:54px" /></span></strong>
+                Receba 30 dias de garantia incondicional, se por algum motivo o nosso método não funcionar para você nesse período, pode pedir seu dinheiro de volta
+        </p>
+        <p style="text-align: center;"><span style="font-size:18px"><strong>Tudo por apenas 12x de</strong></span></p>
+       <h1 align="center" class="headline">R$ 13,55<br/> uma única vez!</h1>
+       
+
+        
+        <div align="center">
+            <a href="./rdd/index.html"><img src="images/f2.png" alt="Add to Cart"></a>
+            <p style="font-size: medium;">Ou R$127,00 a vista</p>
+        </div>  
+      </div>
+      
+        <p> Isso dá menos de R$ 0,50 por dia. Menos do que um café por dia. E muito menos do que um café aqui da
+          Faria Lima!
+
+    </p><p>A partir de agora, você já pode se inscrever, clicando no botão aqui embaixo.</p>
+
+    <h2>Legal... mas se é tão bom, por que está tão barato?</h2>
+
+    <p>Ahhh, eu sei que isso passou pela sua cabeça.</p>
+
+    <p>Se você prestar atenção, o valor de R$129&nbsp;não parece ser um valor
+          aleatório para cobrar em um produto (e de fato não é).</p>
+
+    <p><strong>Razão número 01:</strong> O valor não se torna um obstáculo para
+          ninguém.</p>
+
+    <p><strong>Razão número 02:</strong> Proteção contra curiosos.</p>
+
+    <p>Mesmo que o investimento seja baixo, o simples fato de cobrar já afasta curiosos em busca de
+          “soluções gratuitas” na internet.</p>
+
+    <p>E quem gosta do produto, fica com vontade de comprar outros treinamentos no futuro (essa é a
+          “jogada”).</p>
+
+    <p><em><u>Sem pegadinhas, sem letras miúdas ou nada do tipo.</u></em></p>
+
+    <h2>Em quanto tempo eu irei receber meu acesso?</h2>
+
+    <p>Logo após a aprovação do seu pagamento,&nbsp;<em><strong>você irá
+                      receber no seu e-mail</strong></em>&nbsp;de compra os seus dados de acesso.</p>
+
+    <p><u>O produto está em uma Área de Membros premium</u>&nbsp;para você ter uma
+          experiência melhor com o produto.</p>
+
+    <h2>O pagamento é único?</h2>
+
+    <p>Sim! O pagamento é único (NÃO é mensal).</p>
+
+    <p>Ou seja,&nbsp;<strong>você não corre nenhum risco</strong>.</p>
+
+
+
+    <div class="orderform">
+      <div align="center">
+          <img src="images/pre-pferta.webp" alt="Secure Order Form">
+      </div>
+      <p><strong><span style="color:#cc0000"><img src="images/sales-check-green.png"
+              style="float:left; height:51px; margin-left:10px; margin-right:10px; width:54px" /></span></strong>
+            Acesse todo tratamento fígado restaurado para iniciar agora seu tratamento e conseguir recuperar a saúde do seu fígado</p>
+      <p><br />
+        <strong><span style="color:#cc0000"><img src="images/sales-check-green.png"
+              style="float:left; height:51px; margin-left:10px; margin-right:10px; width:54px" /></span></strong>
+              Receba 30 dias de garantia incondicional, se por algum motivo o nosso método não funcionar para você nesse período, pode pedir seu dinheiro de volta
+      </p>
+      <p style="text-align: center;"><span style="font-size:18px"><strong>Tudo por apenas 12x de</strong></span></p>
+     <h1 align="center" class="headline">R$ 13,55<br/> uma única vez!</h1>
+     
+
+      
+      <div align="center">
+          <a href="./rdd/index.html"><img src="images/f2.png" alt="Add to Cart"></a>
+          <p style="font-size: medium;">Ou R$127,00 a vista</p>
+      </div>  
+    </div>
+      
+
+
+          <!-- OFERTA FLUTUANTE -->
+
+          <div id="sticky-offer" class="hidden">
+            <div class="offer-content">
+              <div class="offer-details">
+                <p class="offer-title">OFERTA POR TEMPO LIMITADO:</p>
+                <div id="countdown" class="countdown">00:09:11</div>
+              </div>
+              <a href="./rdd/index.html" class="cta-button">FAÇA SEU PEDIDO</a>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <!--Buy Area -->
+        <p align="center"> </p>
+        <!--Page Content End -->
+      </div>
+      <!--Main Content -->
+      <!--Main -->
+    </div></div>
+    <!--Main -->
+    <!--Footer -->
+    <div style="padding:10px;"><span style="color:#CCCCCC; font-size:14px; padding-bottom: 130px;"><a
+          style="color:#CCCCCC" href="LINK TO YOUR TERMS" target="_blank">Termos de uso</a> | <a style="color:#CCCCCC"
+          href="LINK TO YOUR DISCLAIMER" target="_blank">Disclaimer</a> | <a style="color:#CCCCCC"
+          href="LINK TO YOUR PRIVACY POLICY" target="_blank">Política de privicadidade</a></span>
+
+    </div>
+    <!--Footer -->
+  </center>
+  <!--Tracking -->
+  <!--Tracking -->
+
+  <script src="js/tools.js"></script>
+</body>
+
+</html>
