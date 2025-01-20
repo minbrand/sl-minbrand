@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSL Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2a2a2a;
+            text-align: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .video-container {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            padding-top: 177.78%; /* Proporção 9:16 (vertical) */
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none; /* Esconde o vídeo inicialmente */
+        }
+
+        .video-container .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        .video-container .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-container .play-button::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 25px solid #fff;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+
+        .text-alert {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff0000;
+            margin: 20px 0;
+        }
+
+        .buy-button {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            margin: 20px auto;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .buy-button.show {
+            display: inline-block;
+            opacity: 1;
+            animation: pulse 1.5s infinite;
+        }
+
+        .buy-button:hover {
+            background-color: #218838;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Botão de Compra Acima do Vídeo -->
+        <a href="https://seulinkdecompra.com" class="buy-button" id="buy-button-top">Compre Agora</a>
+
+        <!-- Vídeo -->
+        <div class="video-container">
+            <video id="video-element">
+                <source src="https://s.groovevideo.com/public/448712/ZSVTvVAxGsDDzRs9Sn2l/download/download.mp4" type="video/mp4">
+                Seu navegador não suporta o player de vídeo.
+            </video>
+            <button class="play-button" id="play-button"></button>
+        </div>
+
+        <!-- Texto de Alerta -->
+        <div class="text-alert">🔈 VERIFIQUE SE O SEU SOM ESTÁ LIGADO!</div>
+
+        <!-- Botão de Compra Abaixo do Texto -->
+        <a href="https://seulinkdecompra.com" class="buy-button" id="buy-button-bottom">Compre Agora</a>
+    </div>
+
+    <script>
+        const playButton = document.getElementById('play-button');
+        const videoElement = document.getElementById('video-element');
+
+        // Função para iniciar o vídeo
+        playButton.addEventListener('click', () => {
+            videoElement.style.display = 'block'; // Mostra o vídeo
+            playButton.style.display = 'none'; // Esconde o botão de play
+            videoElement.currentTime = 0; // Reinicia o vídeo do início
+            videoElement.volume = 1; // Define o volume máximo
+            videoElement.play(); // Reproduz o vídeo
+        });
+
+        // Função para mostrar os botões de compra após 21 minutos (1260 segundos)
+        function showBuyButtons() {
+            const topButton = document.getElementById('buy-button-top');
+            const bottomButton = document.getElementById('buy-button-bottom');
+            topButton.classList.add('show');
+            bottomButton.classList.add('show');
+        }
+
+        // Definir o atraso de 21 minutos
+        setTimeout(showBuyButtons, 6000); // 1260 segundos = 21 minutos
+    </script>
+
+</body>
+</html>
