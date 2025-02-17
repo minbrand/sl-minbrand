@@ -1,282 +1,328 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MinBrand - RESET HWID</title>
-    <style>
-        /* Estilos Gerais */
-        body {
-            background-color: #0c0c0c;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
 
-        a {
-            color: #6a0dad;
-            text-decoration: none;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="img/ico-mm.ico">
+        <title>MinBrand - RESET HWID</title>
+        <style>
+            /* Estilos Gerais */
+            body {
+                background-color: #0c0c0c;
+                color: white;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
 
-        a:hover {
-            text-decoration: underline;
-        }
+            a {
+                color: #007bff;
+                text-decoration: none;
+            }
 
-        /* Top Banner */
-        .top-banner {
-            background: #007bff;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            color: white;
-            font-size: 14px;
-        }
+            a:hover {
+                text-decoration: underline;
+            }
 
-        .top-banner span {
-            color: #ffcc00;
-        }
 
-        /* Navegação */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1a1a1a;
-            padding: 15px 20px;
-            flex-wrap: wrap;
-        }
+            h1 {
+                font-size: 1.5em;
+                margin-top: 0px;
+                /* margin-block-start: 0.63em; */
+                margin-block-end: 0.63em;
+            }
 
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-        }
+            /* Top Banner */
+            .top-banner {
+                background: #007bff;
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+                color: white;
+                font-size: 14px;
+            }
 
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
+            .top-banner span {
+                color: #ffcc00;
+            }
 
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
+            /* Navegação */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #1a1a1a;
+                padding: 15px 20px;
+                flex-wrap: wrap;
+            }
 
-        .menu a {
-            color: white;
-            font-size: 16px;
-        }
+            .logo {
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+            }
 
-        /* Conteúdo Principal */
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .product {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: auto;
-            flex-wrap: wrap;
-        }
-
-        .product img {
-            width: 50%;
-            aspect-ratio: 16 / 9;
-            border-radius: 10px;
-        }
-
-        .product-info {
-            text-align: left;
-            flex: 1;
-        }
-
-        .buy-btn {
-            background: #007bff;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .details {
-            background: #222;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .description {
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
-            background: #111;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .description h2 {
-            color: #007bff;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-
-        .brutus {
-            position: relative;
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        /* Rodapé */
-        footer {
-            background: #1a1a1a;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
             .menu-icon {
-                display: block;
+                display: none;
+                font-size: 24px;
+                cursor: pointer;
             }
 
             .menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                gap: 10px;
-                margin-top: 10px;
-            }
-
-            .menu.active {
                 display: flex;
+                gap: 20px;
             }
 
-            .product {
-                flex-direction: column;
-                align-items: center;
+            .menu a {
+                color: white;
+                font-size: 16px;
+            }
+
+            /* Conteúdo Principal */
+            main {
+
                 text-align: center;
             }
 
+            .product {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 20px;
+                border-radius: 10px;
+                max-width: 800px;
+                margin: auto;
+                flex-wrap: wrap;
+            }
+
             .product img {
-                width: 100%;
-                max-width: 100%;
+                width: 50%;
+                aspect-ratio: 16 / 9;
+                border-radius: 10px;
             }
 
             .product-info {
                 text-align: left;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .top-banner {
-                font-size: 12px;
-            }
-
-            .logo {
-                font-size: 18px;
+                flex: 1;
             }
 
             .buy-btn {
-                font-size: 16px;
+                background: #007bff;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .details {
+                background: #222;
+                padding: 10px;
+                border-radius: 5px;
+                margin-top: 10px;
+                font-size: 14px;
             }
 
             .description {
-                padding: 15px;
+                max-width: 800px;
+                margin: auto;
+                text-align: left;
+                background: #111;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
             }
-        }
-    </style>
-</head>
+
+            .description h2 {
+                color: #007bff;
+            }
+
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                /* Proporção 16:9 */
+                height: 0;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+
+
+            /* Rodapé */
+            footer {
+                background: #1a1a1a;
+                text-align: center;
+                padding: 15px;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+            /* Responsividade */
+            @media (max-width: 768px) {
+                .menu-icon {
+                    display: block;
+                }
+
+                .menu {
+                    display: none;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 10px;
+                    margin-top: 10px;
+                }
+
+                .menu.active {
+                    display: flex;
+                }
+
+                .product {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .product img {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .product-info {
+                    text-align: left;
+                }
+            }
+
+            @media (max-width: 480px) {
+
+
+
+                .top-banner {
+                    font-size: 12px;
+                }
+
+                .logo {
+                    font-size: 18px;
+                }
+
+                .buy-btn {
+                    font-size: 16px;
+                }
+
+                .description {
+                    padding: 15px;
+                }
+            }
+        </style>
+    </head>
+
 <body>
     <header>
         <div class="top-banner">PRODUTOS COM <span>ENTREGA AUTOMÁTICA</span></div>
         <nav>
-           
+
             <div class="logo">minbrand</div>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <div class="menu" id="menu">
-                <a href="#">Home</a>
+                <a href="https://minbrand.com">Home</a>
                 <a href="#">Produtos</a>
                 <a href="https://t.me/sacjota">Contato</a>
             </div>
-           
+
         </nav>
     </header>
-    
+
     <main>
         <section class="product">
             <img src="img/1.webp" alt="produto">
             <div class="product-info">
                 <h1>Netflix + Prime vídeo por 30 dias</h1>
-              <p class="price" style="color: #007bff; font-size: 32px;"><b>R$ 5,00</b></p>
+                <p class="price" style="color: #007bff; font-size: 32px;"><b>R$ 5,00</b></p>
                 <button class="buy-btn">Comprar agora</button>
-                <div class="details">
+
+                <div style="font-size: 14px; color: #f3efef; margin-top: 10px; text-align: center;">Entrega garantida |
+                    30
+                    dias de Garantia</div>
+            </div>
+
+
+            <!--<div class="details">
                     <p><strong>Entrega automática:</strong> <br>A entrega é feita após o pagamento.</p>
                     <p><strong>Métodos de pagamento:</strong> PIX e Cartão</p>
-                </div>
+                </div>-->
             </div>
         </section>
-        
+
         <section class="description">
             <h2>Descrição</h2>
 
             <!-- COLAR AQUI A DESCRICAO -->
-            
+
 
 
             <p>O serviço de Reset HWID permite que redefina o ID de hardware vinculado ao seu painel...</p>
             <p><strong>ATENÇÃO</strong>: Se tiver algum problema com a compra, entre em contato pelo nosso Discord.</p>
-           <!---- <div class="video-container">
+            <!---- <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/HUiGlduIdN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> -->
 
             <hr>
             ✅ ATIVO EM ATE 24 HORAS<br>
-✅ ENTREGA RÁPIDA<br>
-✅ NO SEU EMAIL E SENHA<br>
-✅ Garantia de 30 dias<br>
-⚡ Entrega manual<br>
+            ✅ ENTREGA RÁPIDA<br>
+            ✅ NO SEU EMAIL E SENHA<br>
+            ✅ Garantia de 30 dias<br>
+            ⚡ Entrega manual<br>
+
+
+            <!-- Preço -->
+            <div style="margin: 25px 0;"><!-- Preço Anterior e Desconto --> <span
+                    style="font-size: 14px; color: #95a5a6; text-decoration: line-through; margin-right: 10px;">R$
+                    49,90</span> <span
+                    style="font-size: 14px; background-color: #007bff; color: white; padding: 5px 10px; font-weight: normal; border-radius: 5px;">Baixou
+                    40%</span> <br /><br><strong><span style="margin-top: 20px;">economize R$20</span></strong></div>
+            <!-- Preço Atual -->
+            <div style="margin-bottom: 20px;"><span style="font-size: 32px; color: #007bff; font-weight: bold;">R$
+                    29,90</span></div>
+            <!-- Desconto no Pix -->
+            <div style="font-size: 16px; color: #27ae60; margin-bottom: 20px;">Acesso imediato via e-mail</div>
+            <!-- Botões -->
+            <div
+                style="display: flex; justify-content: center; align-items: center; width: 100%; flex-direction: column;">
+                <!-- Botão de Compra --> <a
+                    style="background-color: #007bff; color: white; padding: 12px 0; font-size: 18px; font-weight: bold; border-radius: 5px; text-decoration: none; width: 100%; display: inline-block; text-align: center; transition: all 0.3s ease;"
+                    href="https://store.minbrand.com/views/dados_pessoais.php?produto_id=38"> Comprar Agora </a>
+                <!-- Micro botão com coração e texto --> <a
+                    style="border: 2px solid #007BFF; color: #007bff; padding: 12px 0; font-size: 18px; text-decoration: none; display: inline-block; text-align: center; width: 90%; margin-top: 10px; border-radius: 5px; text-transform: uppercase; white-space: nowrap;"
+                    href="https://store.minbrand.com/views/dados_pessoais.php?produto_id=38"> Adicionar ao Carrinho </a>
+            </div>
+            <!-- Frase abaixo do botão -->
+            <div style="font-size: 14px; color: #f3efef; margin-top: 10px; text-align: center;">Pagamento Seguro | 30
+                dias de Garantia</div>
+            </div>
 
         </section>
     </main>
-    
+
     <footer>
         <div class="footer-content">
             <p>&copy; minbrand - Todos os direitos reservados.</p>
+            <p><a href="https://minbrand.com/privacidade">Privacidade</a> | <a href="https://minbrand.com/termos">Termos
+                    da loja</a></p>
             <p>Desenvolvido por <a href="https://minbrand.com">minbrand</a></p>
         </div>
     </footer>
@@ -287,5 +333,34 @@
             menu.classList.toggle("active");
         }
     </script>
+    <script>
+        document.addEventListener("click", function (event) {
+            const botao = event.target.closest(".buy-btn"); // Verifica se o clique foi no botão
+
+            if (botao) {
+                event.preventDefault(); // Evita comportamento padrão
+
+                // Dispara evento de Lead no Google Ads
+                if (typeof gtag === "function") {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
+                    });
+                }
+
+                // Dispara evento de Lead no Facebook Ads
+                if (typeof fbq === "function") {
+                    fbq('track', 'Lead');
+                }
+
+                // Redireciona o usuário após 500ms
+                setTimeout(function () {
+                    window.location.href = "https://seulink.com"; // Substitua pelo link desejado
+                }, 500);
+            }
+        });
+    </script>
+
+
 </body>
+
 </html>
