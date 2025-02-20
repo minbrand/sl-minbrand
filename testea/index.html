@@ -107,12 +107,12 @@
 
         .hero h1 {
             font-size: 2.9em;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
         }
 
         .hero p {
             font-size: 1.2em;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
         }
 
         .hero .cta-btn {
@@ -140,45 +140,57 @@
             }
         }
 
-        /* Mobile: 4 produtos por linha */
+        /* Mobile: 4 produtos (2 por linha) */
         @media (max-width: 768px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr); /* 2 produtos por linha */
             }
+
+            /* Oculta os dois últimos produtos em dispositivos móveis */
+            .product-grid .product-card:nth-last-child(-n+2) {
+                display: none;
+            }
         }
+
+
+
+
+ 
 
         .product-card {
             background: #1a1a1a;
             border-radius: 10px;
-            padding: 20px;
+            padding: 5px;
             text-align: center;
         }
 
         .product-card img {
             width: 100%;
             border-radius: 10px;
-            margin-bottom: 10px;
+  
         }
 
         .product-card h2 {
-            font-size: 1.2em;
+            font-size: 0.875rem;
             margin-bottom: 10px;
+            font-weight: 400;
         }
 
         .product-card .price {
             color: #007bff;
-            font-size: 1.5em;
+            font-size: 0.95em;
+            font-weight: bold;
             margin-bottom: 10px;
         }
 
         .product-card .buy-btn {
             background: #007bff;
             color: white;
-            padding: 10px 15px;
+            padding: 10px 5px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
             width: 100%;
         }
 
@@ -300,13 +312,6 @@
                 <p class="price">R$ 20,00</p>
                 <button class="buy-btn">Comprar agora</button>
             </div>
-            <!-- Adicionar mais produtos conforme necessário -->
-        </div>
-        <a href="#" class="see-more">Ver mais</a>
-
-        <!-- Categoria 2 -->
-        <h4>Categoria 2</h4>
-        <div class="product-grid">
             <div class="product-card">
                 <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 5">
                 <h2>Produto 5</h2>
@@ -319,6 +324,12 @@
                 <p class="price">R$ 30,00</p>
                 <button class="buy-btn">Comprar agora</button>
             </div>
+        </div>
+        <a href="#" class="see-more">Ver mais</a>
+
+        <!-- Categoria 2 -->
+        <h4>Categoria 2</h4>
+        <div class="product-grid">
             <div class="product-card">
                 <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 7">
                 <h2>Produto 7</h2>
@@ -331,7 +342,30 @@
                 <p class="price">R$ 40,00</p>
                 <button class="buy-btn">Comprar agora</button>
             </div>
-            <!-- Adicionar mais produtos conforme necessário -->
+            <div class="product-card">
+                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 9">
+                <h2>Produto 9</h2>
+                <p class="price">R$ 45,00</p>
+                <button class="buy-btn">Comprar agora</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 10">
+                <h2>Produto 10</h2>
+                <p class="price">R$ 50,00</p>
+                <button class="buy-btn">Comprar agora</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 11">
+                <h2>Produto 11</h2>
+                <p class="price">R$ 55,00</p>
+                <button class="buy-btn">Comprar agora</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 12">
+                <h2>Produto 12</h2>
+                <p class="price">R$ 60,00</p>
+                <button class="buy-btn">Comprar agora</button>
+            </div>
         </div>
         <a href="#" class="see-more">Ver mais</a>
     </main>
