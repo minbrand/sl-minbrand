@@ -449,13 +449,21 @@
         </div>
     </footer>
 
+
+
+
+
+
+
+
+
     <script>
         function moveSlide(carouselId, direction) {
             const carousel = document.getElementById(carouselId);
             const track = carousel.querySelector('.carousel-track');
             const totalProducts = carousel.querySelectorAll('.product-card').length;
             const productsToShow = 2; // Quantidade de produtos a serem exibidos completamente
-            const productWidth = carousel.querySelector('.product-card').offsetWidth + 20; // Largura do produto + margem
+            const productWidth = carousel.querySelector('.product-card').offsetWidth + 0; // Largura do produto + margem
 
             let currentIndex = parseInt(carousel.getAttribute('data-current-index')) || 0;
 
