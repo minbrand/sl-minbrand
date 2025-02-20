@@ -15,6 +15,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Evita rolagem horizontal */
         }
 
         a {
@@ -43,6 +44,7 @@
             width: 100%;
             padding: 0 20px;
             margin: auto;
+            box-sizing: border-box; /* Garante que o padding não aumente a largura */
         }
 
         /* Top Banner */
@@ -128,8 +130,7 @@
         .product-grid {
             display: grid;
             gap: 20px; /* Espaçamento entre os produtos */
-            margin-bottom: 40px;
-            margin-right: 10px;
+            margin-bottom: 20px;
         }
 
         /* Desktop: 6 produtos por linha */
@@ -139,7 +140,7 @@
             }
         }
 
-        /* Mobile: 2 produtos por linha */
+        /* Mobile: 4 produtos por linha */
         @media (max-width: 768px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr); /* 2 produtos por linha */
@@ -179,6 +180,21 @@
             cursor: pointer;
             font-size: 16px;
             width: 100%;
+        }
+
+        /* Botão Ver Mais */
+        .see-more {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+            margin: 20px auto;
+            width: fit-content;
         }
 
         /* Rodapé */
@@ -284,6 +300,13 @@
                 <p class="price">R$ 20,00</p>
                 <button class="buy-btn">Comprar agora</button>
             </div>
+            <!-- Adicionar mais produtos conforme necessário -->
+        </div>
+        <a href="#" class="see-more">Ver mais</a>
+
+        <!-- Categoria 2 -->
+        <h4>Categoria 2</h4>
+        <div class="product-grid">
             <div class="product-card">
                 <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 5">
                 <h2>Produto 5</h2>
@@ -296,11 +319,6 @@
                 <p class="price">R$ 30,00</p>
                 <button class="buy-btn">Comprar agora</button>
             </div>
-        </div>
-
-        <!-- Categoria 2 -->
-        <h4>Categoria 2</h4>
-        <div class="product-grid">
             <div class="product-card">
                 <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 7">
                 <h2>Produto 7</h2>
@@ -313,31 +331,9 @@
                 <p class="price">R$ 40,00</p>
                 <button class="buy-btn">Comprar agora</button>
             </div>
-            <div class="product-card">
-                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 9">
-                <h2>Produto 9</h2>
-                <p class="price">R$ 45,00</p>
-                <button class="buy-btn">Comprar agora</button>
-            </div>
-            <div class="product-card">
-                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 10">
-                <h2>Produto 10</h2>
-                <p class="price">R$ 50,00</p>
-                <button class="buy-btn">Comprar agora</button>
-            </div>
-            <div class="product-card">
-                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 11">
-                <h2>Produto 11</h2>
-                <p class="price">R$ 55,00</p>
-                <button class="buy-btn">Comprar agora</button>
-            </div>
-            <div class="product-card">
-                <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 12">
-                <h2>Produto 12</h2>
-                <p class="price">R$ 60,00</p>
-                <button class="buy-btn">Comprar agora</button>
-            </div>
+            <!-- Adicionar mais produtos conforme necessário -->
         </div>
+        <a href="#" class="see-more">Ver mais</a>
     </main>
 
     <footer>
