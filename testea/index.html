@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico-mm.ico">
+    <title>MinBrand - Sua loja de produtos digitais</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            background-color: #0c0c0c;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-top: 0px;
+            margin-block-end: 0.63em;
+        }
+      
+        h4 {
+            font-size: 1.5em;
+            text-align: left;
+        }
+
+        /* Container para limitar a largura do site */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 100px 0 10px;
+            margin: auto;
+          
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background: #007bff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+      
+        }
+
+        .top-banner span {
+            color: #ffcc00;
+        }
+
+        /* Navegação */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1a1a1a;
+            /*padding: 15px 20px;*/
+            flex-wrap: wrap;
+     
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero {
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.9em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hero .cta-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+      .preto {
+        width: 100%;
+        background-color: #1a1a1a;
+      
+        
+      }
+
+      .preto1 {
+   
+     
+        max-width: 1000px;
+        padding: 20px 0px 20px 0px;
+        margin: auto;
+
+      }
+
+        /* Carrossel de Produtos */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            margin-right: 20px; /* Espaçamento entre os produtos */
+            flex-shrink: 0; /* Impede que os produtos encolham */
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .product-card .buy-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+
+ 
+        /* Rodapé */
+
+        .branco {
+        width: 100%;
+        background-color: #1a1a1a;
+      
+        
+      }
+
+        footer {
+            background: #1a1a1a;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .product-card {
+                width: calc(50% - 20px); /* Ajusta a largura dos cards para 2 por linha no mobile */
+                max-width: none;
+            }
+
+            .carousel-track {
+                flex-wrap: nowrap; /* Impede que os cards quebrem para a próxima linha */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-banner {
+                font-size: 14px;
+            }
+
+            .logo {
+                font-size: 18px;
+              padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .product-card {
+                width: calc(60% - 20px); /* Ajusta a largura dos cards para 1 por linha em telas muito pequenas */
+            }
+          
+          
+           .product-card h2 {
+            font-size: 20px;
+          }
+          
+          .buy-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+        }
+
+
+        .preto1 {
+   
+     
+   max-width: 1000px;
+   padding: 0 10px 0 0px;
+   margin: auto;
+
+ }
+
+
+        
+
+          
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-banner">PRODUTOS COM <span>ENTREGA AUTOMÁTICA</span></div>
+      
+      <div class="preto">
+        <nav class="preto1">
+           
+            <div class="logo">minbrand</div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="menu" id="menu">
+                <a href="https://minbrand.com">Home</a>
+                <a href="#">Produtos</a>
+                <a href="https://t.me/sacjota">Contato</a>
+            
+          </div></nav>
+
+      </div>
+        
+    </header>
+    <main class="container">
+        <!-- Seção Hero -->
+        <section class="hero">
+            <h1>A Melhor Loja de Produtos Digitais</h1>
+            <p>A minbrand é reconhecida como a líder do mercado, oferecendo uma seleção imbatível de produtos digitais com os melhores preços e qualidade excepcionais.</p>
+            <a href="#produtos" class="cta-btn">Ver Produtos</a>
+        </section>
+
+        <!-- Seção de Produtos -->
+        <h4>Destaque</h4>
+        <section id="carousel1" class="carousel" data-current-index="0">
+            <button class="carousel-button left" onclick="moveSlide('carousel1', -1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Netflix + Prime Video">
+                    <h2>Netflix + Prime Video</h2>
+                    <p class="price">R$ 5,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Reset HWID">
+                    <h2>Reset HWID</h2>
+                    <p class="price">R$ 29,90</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 3">
+                    <h2>Produto 3</h2>
+                    <p class="price">R$ 15,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 4">
+                    <h2>Produto 4</h2>
+                    <p class="price">R$ 25,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 5">
+                    <h2>Produto 5</h2>
+                    <p class="price">R$ 35,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+            <button class="carousel-button right" onclick="moveSlide('carousel1', 1)">&#10095;</button>
+        </section>
+        <p><a href="#" class="cta-btn">Ver mais</a></p>
+
+        <!-- Seção de Produtos -->
+        <h4>Destaque</h4>
+        <section id="carousel2" class="carousel" data-current-index="0">
+            <button class="carousel-button left" onclick="moveSlide('carousel2', -1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Netflix + Prime Video">
+                    <h2>Netflix + Prime Video</h2>
+                    <p class="price">R$ 5,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Reset HWID">
+                    <h2>Reset HWID</h2>
+                    <p class="price">R$ 29,90</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 3">
+                    <h2>Produto 3</h2>
+                    <p class="price">R$ 15,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 4">
+                    <h2>Produto 4</h2>
+                    <p class="price">R$ 25,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.ggmax.com.br/images/7352b089ed2223bb1c49fbbe8c338d43.lg.jpg" alt="Produto 5">
+                    <h2>Produto 5</h2>
+                    <p class="price">R$ 35,00</p>
+                    <button class="buy-btn">Comprar agora</button>
+                </div>
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+            <button class="carousel-button right" onclick="moveSlide('carousel2', 1)">&#10095;</button>
+        </section>
+        <p><a href="#" class="cta-btn">Ver mais</a></p>
+    </main>
+
+
+
+
+
+    <footer class="branco">
+        <div class="footer-content">
+            <p>&copy; minbrand - Todos os direitos reservados.</p>
+            <p><a href="https://minbrand.com/privacidade">Privacidade</a> | <a href="https://minbrand.com/termos">Termos da loja</a></p>
+            <p>Desenvolvido por <a href="https://minbrand.com">minbrand</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function moveSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const track = carousel.querySelector('.carousel-track');
+            const totalProducts = carousel.querySelectorAll('.product-card').length;
+            const productsToShow = 2; // Quantidade de produtos a serem exibidos completamente
+            const productWidth = carousel.querySelector('.product-card').offsetWidth + 20; // Largura do produto + margem
+
+            let currentIndex = parseInt(carousel.getAttribute('data-current-index')) || 0;
+
+            if (direction === 1 && currentIndex < totalProducts - productsToShow) {
+                currentIndex++;
+            } else if (direction === -1 && currentIndex > 0) {
+                currentIndex--;
+            }
+
+            const offset = -currentIndex * productWidth;
+            track.style.transform = `translateX(${offset}px)`;
+            carousel.setAttribute('data-current-index', currentIndex);
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
