@@ -1139,7 +1139,7 @@ body::before {
     display: none;
     margin: 10px auto 0 auto;
     padding: 15px;
-    color: #254b11;
+    color: #700000;
     text-decoration: none;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, .5)
 }
