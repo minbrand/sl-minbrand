@@ -1165,7 +1165,7 @@ body::before {
 }
 
 .video_cta-fake:hover {
-    color: #000
+    color: rgba(255, 255, 255, .5098039216)
 }
 
 .contato {
