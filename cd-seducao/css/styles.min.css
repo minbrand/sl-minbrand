@@ -1139,7 +1139,7 @@ body::before {
     display: none;
     margin: 10px auto 0 auto;
     padding: 15px;
-    color: #700000;
+    color: #000;
     text-decoration: none;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, .5)
 }
@@ -1156,7 +1156,7 @@ body::before {
     width: 100%;
     transform: none;
     transform-origin: initial;
-    background: #152b0a;
+    background: #2b0a0a;
     transition: none
 }
 
@@ -1165,7 +1165,7 @@ body::before {
 }
 
 .video_cta-fake:hover {
-    color: #254b11
+    color: #000
 }
 
 .contato {
