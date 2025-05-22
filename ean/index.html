@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código EAN para ecommerce</title>
+    <meta name="description"
+        content="Tenha acesso a netflix por 30 dias - Gift Card de R$ 10,00">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="./img/ico-mm.ico"/>
+</head>
+
+<body>
+    <header>
+        <div class="top-banner">PRODUTOS COM <span>ENTREGA AUTOMÁTICA</span></div>
+        <div class="preto">
+            <nav>
+                <div class="logo"><img src="./img/minbrand-br.webp"></div>
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <div class="menu" id="menu">
+                    <a href="https://minbrand.com">Home</a>
+                    <a href="/loja">Produtos</a>
+                    <a href="https://t.me/sacjota">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="product">
+            <img src="img/1.webp" alt="produto">
+            <div class="product-info">
+                <h1>Código EAN para ecommerce</h1>
+                <p class="price" style="color: #007bff; font-size: 32px;"><b>R$ 10,00</b></p>
+                <p>Códigos EAN para cadastrar seus produtos no mercado livre e nos demais marktplace</p>
+                <button class="buy-btn">Comprar agora</button>
+
+                <!--- <div style="font-size: 14px; color: #f3efef; margin-top: 10px; text-align: center;">
+                    Entrega garantida | 30 dias de Garantia
+                </div> -->
+            </div>
+        </section>
+
+        <section class="description">
+
+             <!-- <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/Y0_ZQfN5s7k?autoplay=0&controls=0&showinfo=0&rel=0&modestbranding=1" 
+      frameborder="0" 
+      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div> -->
+
+
+
+            <h2>Descrição</h2>
+            <p>Códigos EAN válidos e legais para cadastro de produtos no Mercado Livre e outros marketplaces. </p>
+            <p>Pacote com 100 unidades. Item essencial para vendedores online!</p>
+
+             <p>   👉 PERFEITO PARA:</p>
+
+<p>Vendedores de ecommerce que querem escalar suas vendas.</p>
+
+<p>Empreendedores digitais prontos para cadastrar seus produtos.</p>
+
+<p>Quem busca uma solução direta, sem burocracia.</p>
+
+<p>Não perca tempo! Garanta seus códigos EAN e comece a vender hoje mesmo.</p>
+
+<hr>
+            
+                        <!-- Preço -->
+                        <div style="margin: 25px 0;">
+                            <span style="font-size: 14px; color: #95a5a6; text-decoration: line-through; margin-right: 10px;">
+                                R$ 19,90
+                            </span>
+                            <span style="font-size: 14px; background-color: #007bff; color: white; padding: 5px 10px; font-weight: normal; border-radius: 5px;">
+                                Baixou 49%
+                            </span>
+                            <br><br>
+                            <strong><span style="margin-top: 20px;">economize R$9,90</span></strong>
+                        </div>
+            
+                        <!-- Preço Atual -->
+                        <div style="margin-bottom: 20px;">
+                            <span style="font-size: 32px; color: #007bff; font-weight: bold;">R$ 10,00</span>
+                        </div>
+            
+                        <!-- Desconto no Pix -->
+                        <div style="font-size: 16px; color: #27ae60; margin-bottom: 20px;">
+                            Acesso imediato via e-mail
+                        </div>
+            
+                        <!-- Botões -->
+                        <div style="display: flex; justify-content: center; align-items: center; width: 100%; flex-direction: column;">
+                            <a style="background-color: #007bff; color: white; padding: 12px 0; font-size: 18px; font-weight: bold; border-radius: 5px; text-decoration: none; width: 100%; display: inline-block; text-align: center; transition: all 0.3s ease;"
+                                href="https://store.minbrand.com/views/dados_pessoais.php?produto_id=42&src=btnfundoazul">
+                                Comprar Agora
+                            </a>
+                           <!---- <a style="border: 2px solid #007BFF; color: #007bff; padding: 12px 0; font-size: 18px; text-decoration: none; display: inline-block; text-align: center; width: 90%; margin-top: 10px; border-radius: 5px; text-transform: uppercase; white-space: nowrap;"
+                                href="https://store.minbrand.com/views/dados_pessoais.php?produto_id=42&src=btnfundotrans">
+                                Adicionar ao Carrinho
+                            </a>-->
+                        </div>
+            
+                        <!-- Frase abaixo do botão -->
+                        <div style="font-size: 14px; color: #f3efef; margin-top: 10px; text-align: center;">
+                            Pagamento Seguro | 30 dias de Garantia
+                        </div>
+
+
+
+
+
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; minbrand - Todos os direitos reservados.</p>
+            <p>
+                <a href="https://minbrand.com/privacidade">Privacidade</a> |
+                <a href="https://minbrand.com/termos">Termos da loja</a>
+            </p>
+            <p>Desenvolvido por <a href="https://minbrand.com">minbrand</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            const botao = event.target.closest(".buy-btn"); // Verifica se o clique foi no botão
+
+            if (botao) {
+                event.preventDefault(); // Evita comportamento padrão
+
+                // Dispara evento de Lead no Google Ads
+                if (typeof gtag === "function") {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
+                    });
+                }
+
+                // Dispara evento de Lead no Facebook Ads
+                if (typeof fbq === "function") {
+                    fbq('track', 'Lead');
+                }
+
+                // Redireciona o usuário após 500ms
+                setTimeout(function () {
+                    window.location.href = "https://store.minbrand.com/views/dados_pessoais.php?produto_id=42"; // Substitua pelo link desejado
+                }, 500);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
