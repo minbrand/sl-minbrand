@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovação de Pagamento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .checkmark {
+            color: #4CAF50;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .loading-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+        .progress {
+            height: 10px;
+            background-color: #4CAF50;
+            width: 0%;
+            transition: width 0.5s;
+        }
+        .credentials {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+        .credential-item {
+            margin: 10px 0;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .access-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            display: none;
+            text-decoration: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .access-btn:hover {
+            background-color: #3e8e41;
+        }
+        .save-credentials {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .save-credentials:hover {
+            background-color: #0b7dda;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">✓</div>
+        <h1>Pagamento Aprovado!</h1>
+        <p id="status-message">Seu pagamento foi processado com sucesso. Estamos preparando seu acesso exclusivo...</p>
+        
+        <div class="loading-bar" id="loading-bar">
+            <div class="progress" id="progress-bar"></div>
+        </div>
+        
+        <div class="credentials" id="credentials">
+            <h3>Seu Acesso Exclusivo</h3>
+            <div class="credential-item">
+                <span>Usuário: </span>
+                <span class="highlight" id="username">cliente513@minbrand.com</span>
+            </div>
+            <div class="credential-item">
+                <span>Senha: </span>
+                <span class="highlight" id="password">c513</span>
+            </div>
+            <p class="note">Guarde estas informações em local seguro. Este acesso é pessoal e intransferível.</p>
+        </div>
+        
+        <div class="btn-container">
+            <a href="https://portal.ohenriquemelo.com/" class="access-btn" id="access-btn">ACESSAR ÁREA DE MEMBROS</a>
+            <button class="save-credentials" id="save-credentials">SALVAR CREDENCIAIS</button>
+        </div>
+    </div>
+
+    <div class="copy-notification" id="copy-notification">Credenciais copiadas!</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = 'cliente513@minbrand.com';
+            const password = 'c513';
+            const storageKey = 'paymentApproved_' + username;
+            
+            // Verificar se já mostrou as credenciais antes
+            if (localStorage.getItem(storageKey)) {
+                showCredentialsImmediately();
+            } else {
+                startLoadingAnimation();
+            }
+            
+            // Configurar botão de salvar credenciais
+            document.getElementById('save-credentials').addEventListener('click', function() {
+                saveCredentials();
+            });
+            
+            function startLoadingAnimation() {
+                // Simular progresso da barra de carregamento
+                let progress = 0;
+                const progressBar = document.getElementById('progress-bar');
+                const interval = setInterval(function() {
+                    progress += 5;
+                    progressBar.style.width = progress + '%';
+                    
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(function() {
+                            showCredentials();
+                            localStorage.setItem(storageKey, 'true');
+                        }, 500);
+                    }
+                }, 500);
+            }
+            
+            function showCredentials() {
+                document.getElementById('credentials').style.display = 'block';
+                document.getElementById('loading-bar').style.display = 'none';
+                document.getElementById('status-message').textContent = 'Seu acesso exclusivo está pronto!';
+                
+                // Mostrar botões
+                document.getElementById('access-btn').style.display = 'inline-block';
+                document.getElementById('save-credentials').style.display = 'inline-block';
+                
+                // Preencher credenciais diretamente (sem efeito de digitação para facilitar a cópia)
+                document.getElementById('username').textContent = username;
+                document.getElementById('password').textContent = password;
+            }
+            
+            function showCredentialsImmediately() {
+                document.getElementById('loading-bar').style.display = 'none';
+                document.getElementById('status-message').textContent = 'Seu acesso exclusivo está pronto!';
+                document.getElementById('credentials').style.display = 'block';
+                document.getElementById('username').textContent = username;
+                document.getElementById('password').textContent = password;
+                
+                // Mostrar botões
+                document.getElementById('access-btn').style.display = 'inline-block';
+                document.getElementById('save-credentials').style.display = 'inline-block';
+            }
+            
+            function saveCredentials() {
+                // Criar conteúdo para salvar
+                const credentialsContent = `Acesso ao Curso\n\nUsuário: ${username}\nSenha: ${password}\n\nAcesso: https://portal.ohenriquemelo.com/`;
+                
+                // Tentar usar a API de Clipboard (copiar para área de transferência)
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(credentialsContent).then(function() {
+                        showNotification('Credenciais copiadas!');
+                    }).catch(function() {
+                        downloadCredentials(credentialsContent);
+                    });
+                } else {
+                    downloadCredentials(credentialsContent);
+                }
+            }
+            
+            function downloadCredentials(content) {
+                // Criar um blob com o conteúdo
+                const blob = new Blob([content], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                
+                // Criar link para download
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'credenciais-acesso.txt';
+                document.body.appendChild(a);
+                a.click();
+                
+                // Limpar
+                setTimeout(function() {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    showNotification('Credenciais salvas!');
+                }, 100);
+            }
+            
+            function showNotification(message) {
+                const notification = document.getElementById('copy-notification');
+                notification.textContent = message;
+                notification.style.display = 'block';
+                
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
