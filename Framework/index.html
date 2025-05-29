@@ -1,0 +1,394 @@
+<html><head>
+        
+    <meta charset="utf-8">
+    <title>Framework de Validação</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Framework de Validação">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ4NDQ2NjA3X0ZyYW1ld29ya2RlVmFsaWRhY2FvZGVPZmVydGExLnBuZw.webp">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ2NTY2NDE1X2ExZDAzMjMzN2YyYjQ4OTZiYjk4MzZmYjJmN2QzOWNkNTAweDUwMC53ZWJw.webp">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Abel&family=Abril+Fatface&family=Acme&family=Alegreya&family=Alegreya+Sans&family=Alfa+Slab+One&family=Almarai:wght@300;400;700;800&family=Amiri+Quran&family=Amatic+SC:wght@400;700&family=Amiri&family=Antic+Slab&family=Anton&family=Architects+Daughter&family=Archivo&family=Archivo+Black&family=Archivo+Narrow&family=Arimo&family=Armata&family=Arvo&family=Asap:wght@400;700&family=Assistant&family=Balsamiq+Sans:wght@400;700&family=Bangers&family=Barlow+Condensed&family=Barlow+Semi+Condensed&family=Barlow:wght@400;700;900&family=Bebas+Neue&family=BenchNine&family=Bitter:wght@400;700;900&family=Bree+Serif&family=Cabin&family=Cabin+Condensed&family=Cabin:wght@400;700&family=Cairo:wght@400;700&family=Cantarell&family=Cardo&family=Catamaran&family=Caveat&family=Chakra+Petch&family=Changa:wght@200..800&family=Chivo&family=Cinzel&family=Comfortaa&family=Concert+One&family=Cookie&family=Cormorant+Garamond:wght@400;700&family=Courgette&family=Crete+Round&family=Crimson+Text:wght@400;700&family=Cuprum&family=DM+Sans&family=DM+Serif+Display&family=Dancing+Script:wght@400;700&family=Didact+Gothic&family=Domine&family=Dosis&family=EB+Garamond&family=Economica&family=Exo&family=Exo+2&family=Fira+Sans+Condensed&family=Fira+Sans:wght@400;700;900&family=Fjalla+One&family=Francois+One&family=Frank+Ruhl+Libre&family=Gloria+Hallelujah&family=Great+Vibes&family=Gudea&family=Hammersmith+One&family=Handlee&family=Heebo&family=Hind&family=Hind+Madurai&family=Hind+Siliguri&family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=IBM+Plex+Serif&family=Inconsolata&family=Indie+Flower&family=Inter&family=Istok+Web&family=Josefin+Sans:wght@400;700&family=Josefin+Slab&family=Jost&family=Kalam&family=Kanit&family=Karla&family=Kaushan+Script&family=Lato:wght@400;700;900&family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;700;900&family=Lilita+One&family=Lobster&family=Lobster+Two&family=Lora:wght@400;700&family=Luckiest+Guy&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Manrope&family=Martel:wght@400;700;900&family=Maven+Pro&family=Merriweather+Sans&family=Merriweather:wght@400;700;900&family=Monda&family=Montserrat+Alternates&family=Montserrat:wght@400;700;900&family=Mukta:wght@400;700&family=Mulish&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Neuton&family=News+Cycle&family=Noticia+Text&family=Noto+Color+Emoji&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+HK&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+SC&family=Noto+Sans+TC&family=Noto+Sans:wght@400;700&family=Noto+Serif+JP&family=Noto+Serif:wght@400;700&family=Nunito+Sans:wght@200;300;400;700;900&family=Nunito:wght@300;400;700;900&family=Old+Standard+TT:wght@400;700&family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;700&family=Orbitron&family=Oswald:wght@400;700&family=Outfit&family=Overpass:wght@400;700;900&family=Oxygen:wght@300;400;700&family=PT+Sans+Caption&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Pacifico&family=Passion+One&family=Pathway+Gothic+One&family=Patrick+Hand&family=Patua+One&family=Paytone+One&family=Permanent+Marker&family=Philosopher&family=Play&family=Playfair+Display+SC&family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans&family=Poiret+One&family=Pontano+Sans&family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Prata&family=Prompt&family=Public+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Questrial&family=Quicksand&family=Rajdhani&family=Raleway:wght@400;700;900&family=Red+Hat+Display&family=Reem+Kufi:wght@400..700&family=Righteous&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono&family=Roboto+Slab:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rokkitt&family=Ropa+Sans&family=Rubik:ital,wght@0,400;0,700;1,900&family=Russo+One&family=Sacramento&family=Saira+Condensed&family=Sanchez&family=Sarabun&family=Satisfy&family=Secular+One&family=Shadows+Into+Light&family=Signika+Negative&family=Signika:wght@400;700&family=Slabo+27px&family=Source+Code+Pro:wght@400;700;900&family=Source+Sans+3&family=Source+Sans+Pro:wght@400;700;900&family=Source+Serif+Pro:wght@400;700;900&family=Space+Grotesk&family=Special+Elite&family=Tajawal:wght@400;700;900&family=Tangerine&family=Teko&family=Tinos&family=Titillium+Web:wght@400;700;900&family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&family=Varela+Round&family=Volkhov&family=Vollkorn&family=Work+Sans:wght@400;700;900&family=Yanone+Kaffeesatz&family=Yantramanav&family=Yellowtail&family=Zilla+Slab&display=swap" rel="stylesheet">
+    
+    <link href="css/inpage_published.css" rel="stylesheet">
+    <!-- Meta Pixel Code -->
+<script type="text/javascript" async="" defer="" src="js/matomo.js"></script><script async="" src="js/fbevents.js"></script><script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '586978936392872');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=586978936392872&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+      <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+     
+     
+     <script type="text/javascript">
+        window.websiteurl = "https://minbrand.groovepages.com/10xconversions/";
+        var megamenuEvent = new Event('megamenuLoaded');
+
+        function setPageUrl(button,page,queryString) {
+          var pageUrl = site.pages[page]?.url;
+          button.setAttribute('href', pageUrl + (queryString || ''));
+        }
+
+        function urlWithQueryParam(linkHREF) {
+      if( linkHREF.match(/^(http|https)?:\/\//i) ) {
+        var newQuery = window.location.search.substring(1);
+        if (linkHREF.includes(newQuery)) return linkHREF;
+        var baseLink = linkHREF.split('?')[0];
+        var existingQuery = linkHREF.split('?')[1] || '';
+        var hash = baseLink.split('#')[1] || existingQuery.split('#')[1] || '';
+        baseLink = baseLink.split('#')[0];
+        existingQuery = existingQuery.split('#')[0];
+        newQuery = newQuery ? '&' + newQuery : '';
+
+        var hashStr = hash ? '#' + hash : '';
+        var queryStr = existingQuery || newQuery ? '?' + existingQuery + newQuery : '';
+
+        return baseLink + queryStr + hashStr;
+      }
+
+      return linkHREF;
+    }
+
+        
+      function openQuickPopup(id,config,popupFrame) {
+        const popupClosebutton = '<button class="quick-popup-close-'+(config.closeButton || 'small')+'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>Close</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" transform="translate(0.5 0.5)" fill="#dcdcea" stroke="#dcdcea"><line fill="none" stroke="#dcdcea" stroke-miterlimit="10" x1="27" y1="5" x2="5" y2="27"></line> <line fill="none" stroke="#dcdcea" stroke-miterlimit="10" x1="27" y1="27" x2="5" y2="5"></line></g></svg></button>';
+
+        if( document.body.classList.contains('gpblsh') ) {
+          if( !document.querySelector('[data-gp-quick-popup-id="'+id+'"]') ) {
+            var quickPopupWrapper = document.createElement('div');
+            quickPopupWrapper.setAttribute('data-gp-quick-popup-id', id);
+            quickPopupWrapper.classList.add('hidden-popup');
+
+            var quickPopupWrapperInner = document.createElement('div');
+            quickPopupWrapperInner.innerHTML = popupClosebutton;
+            quickPopupWrapperInner.style = "width:"+(config.width || 625)+"px";
+
+            popupFrame.classList.add('popupframe');
+            quickPopupWrapperInner.prepend(popupFrame);
+            quickPopupWrapper.prepend(quickPopupWrapperInner);
+
+            document.body.prepend(quickPopupWrapper);
+            quickPopupWrapper.classList.remove('hidden-popup');
+
+
+            if (config.appearingAnimation) {
+              quickPopupWrapper.children[0].classList.add(config.appearingAnimation);
+              quickPopupWrapper.children[0].classList.add('animated');
+            }
+
+            quickPopupWrapper.addEventListener('click', e => {
+              if(config.leavingAnimation) {
+                quickPopupWrapper.children[0].classList.add(config.leavingAnimation);
+                quickPopupWrapper.children[0].classList.add('animated');
+                setTimeout(() => {
+                    quickPopupWrapper.children[0].classList.remove(config.leavingAnimation);
+                    quickPopupWrapper.classList.add('hidden-popup');
+                },1000);
+              } else {
+                quickPopupWrapper.classList.add('hidden-popup');
+              }
+            });
+          } else {
+            document.querySelector('[data-gp-quick-popup-id="'+id+'"]').classList.remove('hidden-popup');
+          }
+        }
+      }
+     </script>
+     <script>window.site||window.encodeSite||(window.encodeSite=function(e,s){return e.pages=JSON.parse(atob(e.pages)),window.site=function(e){try{const s={...e.pages}||{};return new Proxy({},{})instanceof Object?(delete e.pages,e.isProxy=!0,new Proxy(e,{pages:s,get(e,s){return"pages"===s&&s in this.pages?this.pages[s]:"pages"===s?this.pages:s in e?e[s]:void 0},set:(e,s,t)=>(e[s]=t,!0)})):void 0}catch(e){}const s={...e.pages}||{};if(new Proxy({},{})instanceof Object)return delete e.pages,e.isProxy=!0,new Proxy(e,{pages:s,get(e,s){return"pages"===s&&s in this.pages?this.pages[s]:"pages"===s?this.pages:s in e?e[s]:void 0},set:(e,s,t)=>(e[s]=t,!0)})}(e),window.site});</script>
+     
+        
+      <!-- Matomo -->
+      <script type="text/javascript">
+        var _paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+        _paq.push(["setCookieDomain", "*.localhost"]);
+        _paq.push(["setDomains", ["*.localhost"]]);
+        _paq.push(['setCustomDimension', 1, "637c5ea5d2648d081519cfc2"]);
+        _paq.push(['setCustomDimension', 2, "B0DIHxzN_"]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="//matomo.groovetech.io/";
+          _paq.push(['setTrackerUrl', u+'matomo.php']);
+          _paq.push(['setSiteId', '4']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+      </script>
+      <noscript><p><img src="//matomo.groovetech.io/matomo.php?idsite=4&rec=1" style="border:0;" alt="" /></p></noscript>
+      <!-- End Matomo Code -->
+      <link data-gp-stylesheet="" href="css/page-11.css" rel="stylesheet">
+        </head>
+      <body data-gp-site-id="637c5ea5d2648d081519cfc2" data-gp-style="" class="gpblsh">
+        <!-- Start Popups -->
+        <script> if(!window.mergeContentSettings) { function mergeContentSettings(){}}</script>
+        
+        <!-- End Popups -->
+        
+    
+    
+    <script id="IE-check">
+      (function() {
+        if (!!window.navigator.userAgent.match(/MSIE|Trident/)) {
+          document.getElementById("IE-warning").style.display = "block";
+        } else {
+          document.getElementById("IE-warning").remove();
+        }
+      })();
+    </script><div id="custom-top">
+      
+    </div><script>
+      (function() {
+        var populateSiteSettings = async function() {
+          if (window.encodeSite) {
+            const result = await encodeSite({"pages":"eyJsMjhrWUo0OFEiOnsidXJsIjoiaW5kZXgifSwiTDVseDN6SmNtIjp7InVybCI6Im9iZy1ib2xldG8ifSwiYWdqWEdDRXc2Ijp7InVybCI6Im9icmlnYWRvLTEweCJ9LCJaM2JaM1c3bGgiOnsidXJsIjoiMDktbW9kZWxvcyJ9LCJKZzNLTDFDV28iOnsidXJsIjoiY29weS13aGF0c2FwcCJ9LCJPaEhDNEN1bXQiOnsidXJsIjoidmlkZW8xLXdweWR6ZGZwYiJ9LCJuSWdxU1RZai0iOnsidXJsIjoiaW5kZXgtYW9nZnVlcmM1In0sIjZ2S2IyZVVEZyI6eyJ1cmwiOiJpbmRleC1hb2dmdWVyYzUifSwiWDlfblVvMXJqIjp7InVybCI6IndlYmluYXItY29uZmlybWF0aW9uLXBhZ2UtYW9nZnVlcmM1In0sImRHTG95MnJnLSI6eyJ1cmwiOiJ3ZWJpbmFyLWJyb2FkY2FzdC1wYWdlLWFvZ2Z1ZXJjNSJ9LCJqdUVlbFYxVWkiOnsidXJsIjoid2ViaW5hci1jaGVja291dC1wYWdlLWFvZ2Z1ZXJjNSJ9LCJDR2tXUGE4blYiOnsidXJsIjoid2ViaW5hci1tdWx0aS1oeWJyaWQtb3RvLXBhZ2UtYW9nZnVlcmM1In0sInF6VkZabV9mMCI6eyJ1cmwiOiJ3ZWJpbmFyLWRvd25zZWxsLXBhZ2UtYW9nZnVlcmM1In0sIllCczRaTWRqWSI6eyJ1cmwiOiJ3ZWJpbmFyLXRoYW5rLXlvdS1wYWdlLWFvZ2Z1ZXJjNSJ9LCJUNDQzUWRHMjkiOnsidXJsIjoicGFnZS02In0sIndpUGhNSG9ESSI6eyJ1cmwiOiJwYWdlLTgifSwiWGZHVmJCbXl6Ijp7InVybCI6InBhZ2UtOSJ9LCJTRHV4ajB3ZmoiOnsidXJsIjoicGFnZS0xMCJ9LCJCMERJSHh6Tl8iOnsidXJsIjoicGFnZS0xMSJ9fQ==","popups":[],"navigation":[{"url":"index","name":"10X Conversions","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"obg-boleto","name":"Obrigado","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"obrigado-10x","name":"Obrigado","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"09-modelos","name":"09 Modelos de carta de vendas de alta conversão","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"copy-whatsapp","name":"Copy para whatsapp","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-6","name":"Page 6","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-8","name":"Page 8","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-9","name":"Page 9","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-10","name":"Page 10","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-11","name":"Framework de Validação","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]}],"baseURL":"https://v1.gdapis.com/api"}, "637c5ea5d2648d081519cfc2");
+            if(!window.inBuilder && window.websiteurl) {
+              const separator = window.websiteurl.charAt(window.websiteurl.length-1) === '/'?'':'/';
+
+              for (const page in window.site.pages) {
+                window.site.pages[page].url = window.websiteurl + separator + window.site.pages[page]?.url;
+              }
+            }
+            if (window.site) window.encodeSite = undefined;
+            site.subscribed = [];
+            site.subscribe = callback => {
+              site.subscribed.push(callback);
+            };
+            var clearSiteCheck = setInterval(function() {
+              if (window.site.isProxy) {
+                window.dispatchEvent(new Event('settingsLoaded'));
+                clearInterval(clearSiteCheck);
+              }
+            }, 250);
+          }
+        };
+        document.readyState !== 'loading' ? populateSiteSettings() : document.addEventListener("DOMContentLoaded", populateSiteSettings);
+      })();
+    </script><div id="page-container" data-gp-page-id="B0DIHxzN_">
+      <div class="blocks-container" id="blocks-container">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      <section class="gp-component-id-TV_DU0Z0k gp-component" data-gp-style="" id="TV_DU0Z0k" data-gp-component="block" data-gp-block-id="12155" data-gp-block="true" data-gp-block-type="block" data-gp-block-data="{" id":12155,"type":"block","thumbnail":"https:="" assets.grooveapps.com="" elements-previews="" thumbs="" navbar11.png","category":"navigation="" bars","tag":"wireframe","user_id":"global","filename":"_navigation-bars_10","height":0,"global":1,"tailwind":1,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="TV_DU0Z0k" tabindex="0"><a name="TV_DU0Z0k" data-gp-block-anchor=""></a>
+
+        <div data-gp-container="" data-gp-style="true" data-gp-component-id="a-44_1SgPa" data-gp-component="container" class="" tabindex="0">
+
+            <div data-gp-component="navbar_10" data-gp-style="" class="gp-component-id-_QJCkMvv6i gp-component" data-gp-component-id="_QJCkMvv6i">
+
+                <div class="gp-component-id-D9owIj4oRL gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="D9owIj4oRL" data-gp-component="container" tabindex="0">
+    
+                    <img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ2Mzc4ODY1X21pbmJyYW5kYnIud2VicA.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-BksWIDAOc6" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="BksWIDAOc6" tabindex="0">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><section class="gp-component gp-component-id-rku2NJTe1" data-gp-component="block" data-gp-style="" data-gp-block-id="12274108" data-gp-block="true" data-gp-block-data="{" id":12274108,"type":"block","thumbnail":"https:="" assets.grooveapps.com="" elements-previews="" thumbs="" 12274108.png","category":"headlines","tag":"directresponse","user_id":"global","filename":"12274108","height":0,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="rku2NJTe1" id="rku2NJTe1" tabindex="0" data-gp-block-type="block" style=""><a name="rku2NJTe1" data-gp-block-anchor=""></a><div class="" data-section-overlay=""></div><div class="gp-component gp-component-id-2zL9d03k7r" data-gp-container="" data-gp-style="true" data-gp-component-id="2zL9d03k7r" data-gp-component="container" tabindex="0"><div class="gp-text-container gp-component gp-component-id-9VsoJRooEv" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="9VsoJRooEv" data-gp-component="null" style="" tabindex="0"><h3 class="gp-component-id-G5f9MuSr3w" data-id="quill-node-0"><em>O processo completo para validar o seu produto em 7 dias...</em></h3></div><div class="gp-component gp-component-id-P2qOsMdIdw" data-gp-component="layout-1" data-gp-dnd="" data-gp-style="" data-gp-component-id="P2qOsMdIdw" tabindex="0"><div class="gp-component-id-omZy0auGSD"><div class="gp-component-id-yGUBqytpRy" data-gp-grid-col=""><div class="gp-component gp-component-id-RtWafxjdb4" data-gp-container="" data-gp-style="true" data-gp-component-id="RtWafxjdb4" data-gp-component="container" tabindex="0"><div class="gp-text-container gp-component gp-component-id-XuNc4FvzQW" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="XuNc4FvzQW" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-nlrjCUvNy1" data-id="quill-node-0">Saiba <u style="color: rgb(252, 229, 151);">antes de anunciar</u> se seu produto vai ser lucrativo ou não</h2></div><div class="gp-text-container gp-component gp-component-id-zS1u8O4NRc" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="zS1u8O4NRc" data-gp-component="null" style="" tabindex="0"><h3 class="gp-component-id-8WglXDoZ_1" data-id="quill-node-0">Por apenas <strong style="color: rgb(255, 255, 255);">R$ 29,90</strong> você vai ter acesso ao <strong><u>Framework de Validação de Oferta</u></strong></h3></div><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ4NDE0MjI3X0ZyYW1ld29ya2RlVmFsaWRhY2FvZGVPZmVydGEyLnBuZw.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-XN1tU0Mo6" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="XN1tU0Mo6" tabindex="0"><div class="gp-text-container gp-component gp-component-id-PEPs440NqR" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="PEPs440NqR" data-gp-component="null" tabindex="0"></div><div class="gp-text-container gp-component gp-component-id-O71ZJiBudh" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="O71ZJiBudh" data-gp-component="null" tabindex="0"></div></div></div></div></div></div></section><section class="gp-component-id-ssDbrkjZT gp-component" data-gp-component="block" data-gp-style="" data-gp-block-id="12300864" data-gp-block="true" data-gp-block-data="{" id":12300864,"type":"block","thumbnail":"="" assets.grooveapps.com="" pages-previews="" 62bbe34aa6635.png","category":"guarantee","tag":"directresponse","user_id":"global","filename":null,"height":622,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="ssDbrkjZT" id="ssDbrkjZT" tabindex="0" data-gp-block-type="block"><a name="ssDbrkjZT" data-gp-block-anchor=""></a>
+        <div class="" data-section-overlay=""></div>
+        <div class="gp-component-id-e4hPQZw1Je gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="e4hPQZw1Je" data-gp-component="container" tabindex="0" data-gp-overlay="false"><div class="gp-text-container gp-component gp-component-id-6TGVAxdxs2" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="6TGVAxdxs2" data-gp-component="null" tabindex="0" style=""><h2 class="gp-component-id-GB2UbUWFAI" data-id="quill-node-0">Não se trata de mais um curso e sim do <u>plano prático</u> para você conseguir saber se uma oferta tem potencial de lucro ou não!</h2></div><div class="gp-text-container gp-component gp-component-id-P4YzwkSNb5" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="P4YzwkSNb5" data-gp-component="null" tabindex="0" style=""><p class="gp-component-id-ymBT_YmMBx" data-id="quill-node-0">Desde que o mundo é mundo as pessoas fazem negócios.<br><br>Antes de existir o dinheiro as pessoas faziam escambo.<br><br>Se você tivesse pão, mas precisasse de leite, você tinha que ir até o dono da vaca, oferecer o seu pão em troca do leite dele.<br><br>Mas se o dono da vaca não precisasse de pão você não conseguiria fazer negócio com ele.<br><br>Vamos supor que ele estivesse precisando de sabão.<br><br>Então, você teria que trocar o seu pão por sabão, para depois ir no dono da vaca para trocar o sabão por leite.<br><br>Depois da criação do dinheiro, essa troca ficou mais fácil, mas um fundamento nunca mudou.<br><br>As pessoas só compram o que querem ou precisam, isto é, você só compra o que tem valor pra você.<br><br>O maior erro dos empreendedores digitais é acreditar que todo mundo precisa do produto que você criou.<br><br>Porque a gente se apaixona pelas nossas criações, mas as pessoas não estão nem aí para o nosso produto.<br><br>Eles só querem resolver seus problemas e alcançarem os seus desejos.<br><br>É por isso que você precisa descobrir como validar a sua oferta e ver se ela de fato está gerando desejo nas pessoas em comprar o seu produto ou não</p></div><div class="gp-component-id-TaCZL1iApP gp-component" data-gp-dnd="" data-gp-style="" data-gp-component-id="TaCZL1iApP" data-gp-component="null" tabindex="0"><div class="gp-component-id-YvAuQki0Mk">
+                    <div class="gp-component-id-Wf2Q5wr6Ej" data-gp-grid-col="">
+                        
+                    </div>
+                    <div class="gp-component-id-796SoQIb3b" data-gp-grid-col="">
+                        
+                    </div>
+                </div></div></div>
+    </section><section class="gp-component gp-component-id-os5bfHgde" data-gp-component="block" data-gp-style="" data-gp-block-id="12407498" data-gp-block="true" data-gp-block-data="{" id":12407498,"type":"block","thumbnail":"="" assets.grooveapps.com="" pages-screenshots="" 68375af4db3cb.png","category":"content","tag":"designed","user_id":"cb08dae0-46f4-4b0a-ace1-566afb264641","filename":null,"height":3888,"global":0,"tailwind":0,"created_at":"2025-05-28="" 18:50:28"}"="" data-gp-component-id="os5bfHgde" data-gp-block-type="block" id="os5bfHgde" tabindex="0"><a name="os5bfHgde" data-gp-block-anchor=""></a>
+        <div class="" data-section-overlay=""></div>
+        <div class="gp-component gp-component-id-pXUlwv02Fz" data-gp-container="" data-gp-style="true" data-gp-component-id="pXUlwv02Fz" data-gp-component="container" tabindex="0"><div class="pl-0 pr-0 gp-component gp-component-id-Nw87EGu6PF" data-gp-dnd="" data-gp-style="" data-gp-component="layout-1" data-gp-component-id="Nw87EGu6PF" tabindex="0">
+      <div class="-ml-0 -mr-0">
+        <div class="w-full pl-0 pr-0" data-gp-grid-col="">
+          <div class="gp-component gp-component-id-baMoX1zwep" data-gp-container="" data-gp-style="true" data-gp-component-id="baMoX1zwep" data-gp-component="container" tabindex="0"><div class="gp-component gp-component-id-E2Ruqx0qQN" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="E2Ruqx0qQN" tabindex="0"><div class="gp-component gp-component-id-FSKBTPUc74" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="FSKBTPUc74" tabindex="0"><div class="gp-text-container gp-component gp-component-id-nNzCrbrLie" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="nNzCrbrLie" data-gp-component="null" tabindex="0"><p class="gp-component-id-0fSoEL6v6W" data-id="quill-node-0">MEUS MÓDULOS</p></div></div><div class="gp-text-container gp-component gp-component-id-K9rLal38PI" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="K9rLal38PI" data-gp-component="null" tabindex="0"><h2 class="gp-component-id-Erc43ZI4HF" data-id="quill-node-0"><span style="color: rgb(46, 86, 204);">O que irá aprender</span></h2></div><div class="gp-component-id-mFP60WxENp gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="mFP60WxENp" tabindex="0"><div class="gp-component-id-CEtBF0paT7 gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="CEtBF0paT7" tabindex="0" data-gp-overlay="false"><div class="gp-text-container gp-component gp-component-id-63wA6TFGMp" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="63wA6TFGMp" data-gp-component="null" tabindex="0"><p class="gp-component-id-dqmMy7Lb3E" data-id="quill-node-0">Módulo 1</p></div></div><div class="gp-text-container gp-component gp-component-id-CYoPIexUiG" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="CYoPIexUiG" data-gp-component="null" tabindex="0" style=""><h4 class="gp-component-id-91d3OtNery" data-id="quill-node-0">Framework de Validação</h4></div><div class="gp-text-container gp-component gp-component-id-tENvUBNEJbH" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="tENvUBNEJbH" data-gp-component="null" tabindex="0"><p class="gp-component-id-rtomQpgJ0CD" data-id="quill-node-0">O roteiro exato para saber se o seu produto tem alguma chance de vender, antes de gastar com anúncios. <br><br>Funciona mesmo que você não seja especialista em marketing digital, vendas ou tecnologia. <br><br>Você também terá acesso a aula aula explicando no detalhe cada um desses passos apenas para seguir e validar a sua oferta em 7 dias.</p></div></div><div class="gp-component gp-component-id-afq4z14mZaH" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="afq4z14mZaH" tabindex="0"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ4NDU5MTg0Xy53ZWJw.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-UBnJrmWaTGY" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="UBnJrmWaTGY" tabindex="0"><div class="gp-component gp-component-id-gyTi8Uw0H" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="gyTi8Uw0H" tabindex="0"><div class="gp-component gp-component-id-7eWFJnA9TS" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="7eWFJnA9TS" tabindex="0" data-gp-overlay="false"><div class="gp-text-container gp-component gp-component-id-NpeJu9gXty" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="NpeJu9gXty" data-gp-component="null" tabindex="0"><p class="gp-component-id-BNbkZOfTGS" data-id="quill-node-0">Módulo 2</p></div></div><div class="gp-text-container gp-component gp-component-id-v4rkYWFEF" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="v4rkYWFEF" data-gp-component="null" tabindex="0"><h4 class="gp-component-id-JYHNByOrQS" data-id="quill-node-1">Roteiro de criativos que convertem</h4></div><div class="gp-text-container gp-component gp-component-id-xQxpBiRmUC" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="xQxpBiRmUC" data-gp-component="null" tabindex="0" style=""><p class="gp-component-id-qznKWAJ82v" data-id="quill-node-1">Uma das etapas é oferecer o seu produto e para que você não tenha nenhum bloqueio criativo, eu vou compartilhar com você o meu roteiro que eu uso para fazer os criativos para mim e para os meus clientes que já faturam múltiplos 7 dígitos</p></div></div><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ4NDU5MTg0Xy53ZWJw.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-4fQhEKztN" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="4fQhEKztN" tabindex="0"><div class="gp-component gp-component-id-jl6wKL1UU" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="jl6wKL1UU" tabindex="0"><div class="gp-component gp-component-id-m5tFrL0ttj" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="m5tFrL0ttj" tabindex="0" data-gp-overlay="false"><div class="gp-text-container gp-component gp-component-id-vkBN6vQ_pu" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="vkBN6vQ_pu" data-gp-component="null" tabindex="0"><p class="gp-component-id-SZ0taUCi01" data-id="quill-node-0">Módulo 3</p></div></div><div class="gp-text-container gp-component gp-component-id-GkTbsnN2Vg" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="GkTbsnN2Vg" data-gp-component="null" tabindex="0"><h4 class="gp-component-id-Pp9jSzt6gt" data-id="quill-node-1">Prompts para fazer a Inteligência Artificial trabalhar pra você</h4></div><div class="gp-text-container gp-component gp-component-id-UlZwW2qhzP" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="UlZwW2qhzP" data-gp-component="null" tabindex="0"><p class="gp-component-id-cggZlD8Kwm" data-id="quill-node-0">Como você já sabe, a inteligência artificial está em alta.<br><br>Além do roteiro que eu vou compartilhar com você os prompts que você deve usar, junto com o roteiro, para fazer a inteligência artificial criar todo o seu criativo.<br><br>Você vai ter um copywriter experiente a custo zero escrevendo seus criativos, para você não ter que se preocupar com isso.</p></div></div></div><div class="gp-component gp-component-id-Q4xBRKaKW" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="Q4xBRKaKW" tabindex="0"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ4NDU5MTg0Xy53ZWJw.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-xXizCb6ikl" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="xXizCb6ikl" tabindex="0"><div class="gp-component gp-component-id-A_e1J94r01" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="A_e1J94r01" tabindex="0"><div class="gp-component gp-component-id-SbdO0bvKjt" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="SbdO0bvKjt" tabindex="0" data-gp-overlay="false"><div class="gp-text-container gp-component gp-component-id-i0_UfcNJk8" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="i0_UfcNJk8" data-gp-component="null" tabindex="0"><p class="gp-component-id-EKq9gB0The" data-id="quill-node-0">Módulo 4</p></div></div><div class="gp-text-container gp-component gp-component-id-srLIaWz7i6" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="srLIaWz7i6" data-gp-component="null" tabindex="0"><h4 class="gp-component-id-SxqQ04i5V" data-id="quill-node-1">Calculadora de métricas</h4></div><div class="gp-text-container gp-component gp-component-id-k2wRnoYNvg" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="k2wRnoYNvg" data-gp-component="null" tabindex="0"><p class="gp-component-id-nybm5c905A" data-id="quill-node-0">Uma calculadora com as 5 principais métricas que devem ser analisadas para avaliar a qualidade da sua oferta.<br><br>Vai funcionar assim, você coloca os dados na planilha e ela vai dizer o que você precisa ajustar neste processo de validação de oferta.</p></div></div></div></div></div>
+        </div>
+      </div>
+    </div></div>
+    </section><section class="gp-component gp-component-id-ruWdDGPUx textediting" data-gp-component="block" data-gp-style="" data-gp-block-id="12258642" data-gp-block="true" data-gp-block-data="{" id":12258642,"type":"block","thumbnail":"https:="" assets.grooveapps.com="" elements-previews="" thumbs="" 12258642.webp","category":"bonus="" boxes","tag":"directresponse","user_id":"global","filename":"12258642","height":0,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="ruWdDGPUx" id="ruWdDGPUx" tabindex="0" data-gp-block-type="block"><a name="ruWdDGPUx" data-gp-block-anchor=""></a><div class="" data-section-overlay=""></div><div class="gp-component gp-component-id-vom3Qmj5Es" data-gp-container="" data-gp-style="true" data-gp-component-id="vom3Qmj5Es" data-gp-component="container" tabindex="0"><div class="gp-component gp-component-id-kFAUdwi2dW" data-gp-component="layout-1" data-gp-dnd="" data-gp-style="" data-gp-component-id="kFAUdwi2dW" tabindex="0"><div class="gp-component-id-wvRLXQ2XdM"><div class="gp-component-id-oxf3KcADRu" data-gp-grid-col=""><div class="gp-component gp-component-id-smDZaFtcuD" data-gp-container="" data-gp-style="true" data-gp-component-id="smDZaFtcuD" data-gp-component="container" tabindex="0"><div class="gp-component gp-component-id-hsQUcv2RuH" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="hsQUcv2RuH" tabindex="0"><div class="gp-text-container gp-component gp-component-id-SQQ3fizzNf" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="SQQ3fizzNf" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-bQCCNWw7o0" data-id="quill-node-0"><strong>Bônus #1 - Insider Community</strong></h2></div></div><div class="gp-component gp-component-id-7K_50kOYFW" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="7K_50kOYFW" tabindex="0"><div class="gp-text-container gp-component gp-component-id-axFgVRMYts" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="axFgVRMYts" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-9tV30MOcdH" data-id="quill-node-0">Nossa comunidade no Discord</h2></div><div class="gp-text-container gp-component gp-component-id-8Q7VZZiGU6" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="8Q7VZZiGU6" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-DHDNxhwgYE" data-id="quill-node-0">Valor total: R$39.00</h2></div><img src="images/1630996447_Laptop.png" alt="" class="gp-component gp-component-id-j0QboMg_WH" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="image" data-gp-component-id="j0QboMg_WH" tabindex="0"><div class="gp-text-container gp-component gp-component-id-Ap3an5QdBy" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="Ap3an5QdBy" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-MlKIP7YSwB" data-id="quill-node-0">Receba acesso a nossa comunidade no discord para poder trocar ideias e poder aprender com quem está no campo de batalha</p></div></div></div></div></div></div></div></section><section class="gp-component-id-oTxW4hCTt gp-component" data-gp-component="block" data-gp-style="" data-gp-block-id="12342091" data-gp-block="true" data-gp-block-data="{" id":12342091,"type":"block","thumbnail":"="" assets.grooveapps.com="" pages-previews="" 641f0575e5d1e.png","category":"pricing","tag":"modern","user_id":"global","filename":null,"height":847,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="oTxW4hCTt" data-gp-block-type="block" id="oTxW4hCTt" tabindex="0" style=""><a name="oTxW4hCTt" data-gp-block-anchor=""></a>
+        <div class="" data-section-overlay=""></div>
+        <div class="gp-component gp-component-id-wBt5BuT09M" data-gp-container="" data-gp-style="true" data-gp-component-id="wBt5BuT09M" data-gp-component="container" tabindex="0"><div class="gp-component-id-33wctq0Hgn gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="33wctq0Hgn" tabindex="0"><div class="gp-component gp-component-id-UyC0u2FyZs" data-gp-dnd="" data-gp-style="" data-gp-component-id="UyC0u2FyZs" data-gp-component="null" tabindex="0">
+                <div class="gp-component-id-72eriXEN3t">
+                    <div class="gp-component-id-IwE20vJMTe" data-gp-grid-col="">
+                        <div class="gp-component-id-1P_M6ZQst4 gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="1P_M6ZQst4" data-gp-component="container" tabindex="0"><div class="gp-component-id-5pp9yvvrky gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="5pp9yvvrky" tabindex="0"><div class="gp-component gp-component-id-8whg04Y0H0" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="8whg04Y0H0" tabindex="0"><a class="text-5xl gp-component gp-component-id-wbHaKaTZaa" data-gp-button-id="SOJ6nSpwN" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="wbHaKaTZaa" style=""><span class="fas fa-adjust" aria-hidden="true"></span> </a><div class="gp-text-container gp-component gp-component-id-sFJuHgpqnn" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="sFJuHgpqnn" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-7SGreISpqo" data-id="quill-node-0">Pare de arriscar!</h2></div><div class="gp-text-container gp-component gp-component-id-s11Hj6oe7v" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="s11Hj6oe7v" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-_WRSm_mn40" data-id="quill-node-0">Aprenda o passo a passo para identificar se um oferta tem potencial de vender ou não e se a sua oferta está boa analisando as métricas dos anúncios</p></div></div><div class="gp-component gp-component-id-UhG9ADMnjP" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="UhG9ADMnjP" tabindex="0"><div class="gp-text-container gp-component gp-component-id-ABTaucpULZ" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="ABTaucpULZ" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-HL1HcjrAdk" data-id="quill-node-0">"Agora eu bato o olho em uma oferta e já sei se vende ou não"</p></div><div class="gp-component-id-yGMerN1l_a gp-component" data-gp-dnd="" data-gp-style="" data-gp-component-id="yGMerN1l_a" data-gp-component="null" style="" tabindex="0">
+                <div class="gp-component-id-72eriXEN3t">
+                    <div class="gp-component-id-IwE20vJMTe" data-gp-grid-col="">
+                        <div class="gp-component gp-component-id-zxmoHZOA1U4" data-gp-container="" data-gp-style="true" data-gp-component-id="zxmoHZOA1U4" data-gp-component="container" tabindex="0"><img src="aHR0cHM6Ly9pbWFnZXMu" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-1vwiClfQj0v" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="image" data-gp-component-id="1vwiClfQj0v" tabindex="0"></div>
+                    </div>
+                    <div class="gp-component-id-PzmR6VfCuQ" data-gp-grid-col="">
+                        <div class="gp-component-id-i9a8RXGnZHo gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="i9a8RXGnZHo" data-gp-component="container" tabindex="0"><div class="gp-text-container gp-component gp-component-id-uvkGPDZvKMj" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="uvkGPDZvKMj" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-ePaw_4a2j_p" data-id="quill-node-0">Thiago Almeida</p></div><div class="gp-text-container gp-component gp-component-id-nB0xOgA90Oz" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="nB0xOgA90Oz" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-F5Tc938uyiY" data-id="quill-node-0">Empreendedor</p></div></div>
+                    </div>
+                </div>
+            </div></div></div></div>
+                    </div>
+                    <div class="gp-component-id-PzmR6VfCuQ" data-gp-grid-col="">
+                        <div class="gp-component gp-component-id-Mhwm0vYkusG" data-gp-container="" data-gp-style="true" data-gp-component-id="Mhwm0vYkusG" data-gp-component="container" tabindex="0"><div class="gp-component-id-roWDPG4k3gg gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="roWDPG4k3gg" tabindex="0"><div class="gp-text-container gp-component gp-component-id-IoL2pnEKDwO" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="IoL2pnEKDwO" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-9uRNWQU01bZ" data-id="quill-node-0">Vídeo aulas direto ao ponto</h2></div><div class="gp-text-container gp-component gp-component-id-GGfsgpVRAov" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="GGfsgpVRAov" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-olSzN4jMTdj" data-id="quill-node-0">Não é para iniciantes românticos. É para quem age. Sua jornada para ficar rico começa agora</p></div><div class="gp-component-id-pSU85YsGgzn gp-component" data-gp-dnd="" data-gp-style="" data-gp-component="layout-2-2" data-gp-component-id="pSU85YsGgzn" tabindex="0">
+      <div class="gp-component-id-SV8lNE9xw">
+        <div class="gp-component-id-3Qy_MNkz64" data-gp-grid-col="">
+          <div class="gp-component-id-XwWVJcHA2mW gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="XwWVJcHA2mW" data-gp-component="container" tabindex="0"><div class="gp-component gp-component-id-DUaBDqEYRtu" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="DUaBDqEYRtu" tabindex="0"><li class="gp-component gp-component-id-l6FDPLX6WKy" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="l6FDPLX6WKy" tabindex="0">
+      <a class="text-5xl gp-component gp-component-id-KFi1_wnhKhF" data-gp-button-id="U9ioliOIU" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="KFi1_wnhKhF"><span class="far fa-circle" aria-hidden="true"></span> </a>
+        <div class="gp-text-container gp-component gp-component-id-mddxyvqQice" data-gp-style="" data-gp-text="" data-gp-component-id="mddxyvqQice" data-gp-component="null"><p class="gp-component-id-_llwgRVO3m9" data-id="quill-node-0">Basic</p></div>
+      </li><div class="gp-component gp-component-id-2xG0IN91doZ" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="2xG0IN91doZ" tabindex="0"><div class="gp-text-container gp-component gp-component-id-4eFqAdr42Ll" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="4eFqAdr42Ll" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-uDnb_U2yvuQ" data-id="quill-node-0">R$29,90</p></div></div><ul class="gp-component gp-component-id-0jlhU6JVRJe" data-gp-container="" data-gp-dnd="" data-gp-style="true" data-gp-component-label="List container" data-gp-component="container" data-gp-component-id="0jlhU6JVRJe" tabindex="0"><li class="gp-component gp-component-id-kk1wnGwhokq" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="kk1wnGwhokq" tabindex="0">
+      <a class="text-5xl gp-component gp-component-id-rW_ycoUkRAC" data-gp-button-id="bo5xAjCrw" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="rW_ycoUkRAC"><span class="fas fa-check-circle" aria-hidden="true"></span> </a>
+        <div class="gp-text-container gp-component gp-component-id-eZ8TpS61lZu" data-gp-style="" data-gp-text="" data-gp-component-id="eZ8TpS61lZu" data-gp-component="null"><p class="gp-component-id-0KSYjdxw1J4" data-id="quill-node-0">Framework de Validação</p></div>
+      </li></ul><a target="_blank" rel="noopener noreferrer" href="https://actuspay.com/views/dados_pessoais.php?produto_id=31" data-gp-button-id="pWyUAlx8E" class="items-center gp-component gp-component-id-14FsTHe_x2v" data-gp-style="" data-gp-dnd="" data-gp-component="button" data-gp-component-id="14FsTHe_x2v">
+    
+    <div style="display: inline-block; flex-grow: 1;">
+      <div class="gp-component gp-component-id-b9PTN7IiMB7" data-gp-component="button main-label" data-gp-style="" data-gp-component-id="b9PTN7IiMB7">COMPRAR AGORA</div>
+      
+    </div>
+    
+    <script id="script-SIY6FxGMU">
+            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
+              window.addEventListener(myEvent, (e) => {
+                const link = document.querySelector('[data-gp-button-id="pWyUAlx8E"]');
+                if( link ){
+                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
+                  link.setAttribute('href',urlWithQueryParam(linkHREF));
+                }
+              });
+            });
+          </script>
+  </a></div></div>
+        </div>
+        <div class="gp-component-id-qlQXMIrfYG" data-gp-grid-col="">
+          <div class="gp-component-id-TX59OcDeTVx gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="TX59OcDeTVx" data-gp-component="container" tabindex="0"><div class="gp-component-id-aTcLG60yVs2 gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="aTcLG60yVs2" tabindex="0"><li class="gp-component-id-InguQBnMDan gp-component" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="InguQBnMDan" style="" tabindex="0">
+      <a class="text-5xl gp-component gp-component-id-E9YqbfDkE6z" data-gp-button-id="rwKTy932j" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="E9YqbfDkE6z"><span class="far fa-dot-circle" aria-hidden="true"></span> </a>
+        <div class="gp-text-container gp-component gp-component-id-XoXDNK7tet6" data-gp-style="" data-gp-text="" data-gp-component-id="XoXDNK7tet6" data-gp-component="null"><p class="gp-component-id-IbFCMXMb0I7" data-id="quill-node-0">Pro</p></div>
+      </li><div class="gp-component gp-component-id-KZT4pocSfrE" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="KZT4pocSfrE" tabindex="0"><div class="gp-text-container gp-component gp-component-id-CvIRNekLOgi" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="CvIRNekLOgi" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-gUuKpBKsfCW" data-id="quill-node-0">R$49,90</p></div></div><ul class="gp-component gp-component-id-hEbW6BRSOgK" data-gp-container="" data-gp-dnd="" data-gp-style="true" data-gp-component-label="List container" data-gp-component="container" data-gp-component-id="hEbW6BRSOgK" tabindex="0" style=""><li class="gp-component gp-component-id-Xu0Tznia3iP" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="Xu0Tznia3iP" tabindex="0">
+      <a class="text-5xl gp-component gp-component-id-ns_SSdCKSPJ" data-gp-button-id="bo5xAjCrw" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="ns_SSdCKSPJ"><span class="fas fa-check-circle" aria-hidden="true"></span> </a>
+        <div class="gp-text-container gp-component gp-component-id-CwSV9zC2sEC" data-gp-style="" data-gp-text="" data-gp-component-id="CwSV9zC2sEC" data-gp-component="null"><p class="gp-component-id-l4kFCdfZNC7" data-id="quill-node-0">Framework de Validação</p></div>
+      </li><li class="gp-component gp-component-id-WJPUmYQWQZA" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="WJPUmYQWQZA" tabindex="0">
+      <a class="text-5xl gp-component gp-component-id-2uQsSXXP0p8" data-gp-button-id="mbBf25PvX" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="2uQsSXXP0p8"><span class="fas fa-check-circle" aria-hidden="true"></span> </a>
+        <div class="gp-text-container gp-component gp-component-id-haZAGUsZH03" data-gp-style="" data-gp-text="" data-gp-component-id="haZAGUsZH03" data-gp-component="null"><p class="gp-component-id-uhF8nt0qGjL" data-id="quill-node-0">Comunidade Discord</p></div>
+      </li><li class="gp-component gp-component-id-iEuliJ0pEXP" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="iEuliJ0pEXP" tabindex="0">
+      <a class="text-5xl gp-component gp-component-id-2or0N7GxxP0" data-gp-button-id="xwr1Q_Xfc" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="fa-icon" data-gp-component-id="2or0N7GxxP0"><span class="fas fa-check-circle" aria-hidden="true"></span> </a>
+        <div class="gp-text-container gp-component gp-component-id-QRqRwNFsFog" data-gp-style="" data-gp-text="" data-gp-component-id="QRqRwNFsFog" data-gp-component="null"><p class="gp-component-id-rxlSzzlvW8g" data-id="quill-node-0">Ofertas validadas</p></div>
+      </li></ul><a target="_blank" rel="noopener noreferrer" href="https://actuspay.com/views/dados_pessoais.php?produto_id=34" data-gp-button-id="OGot-hs4W" class="items-center gp-component gp-component-id-r4szdJuX4u4" data-gp-style="" data-gp-dnd="" data-gp-component="button" data-gp-component-id="r4szdJuX4u4">
+    
+    <div style="display: inline-block; flex-grow: 1;">
+      <div class="gp-component gp-component-id-hgsrP8oayaz" data-gp-component="button main-label" data-gp-style="" data-gp-component-id="hgsrP8oayaz">COMPRAR AGORA</div>
+      
+    </div>
+    
+    <script id="script-a54KeSRgR">
+            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
+              window.addEventListener(myEvent, (e) => {
+                const link = document.querySelector('[data-gp-button-id="OGot-hs4W"]');
+                if( link ){
+                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
+                  link.setAttribute('href',urlWithQueryParam(linkHREF));
+                }
+              });
+            });
+          </script>
+  </a></div></div>
+        </div>
+      </div>
+    </div></div></div>
+                    </div>
+                </div>
+            </div></div></div>
+    </section><section class="gp-component gp-component-id-Ec6DI7NV0" data-gp-component="block" data-gp-style="" data-gp-block="true" data-gp-component-id="Ec6DI7NV0" tabindex="0" data-gp-block-id="15053" data-gp-block-type="block" data-gp-block-data="{" id":15053,"type":"block","thumbnail":"https:="" assets.grooveapps.com="" pages-previews="" 5f77015194e9e.png","category":"content","tag":"designed","user_id":"global","filename":null,"height":0,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" id="Ec6DI7NV0" style=""><a name="Ec6DI7NV0" data-gp-block-anchor=""></a>
+        <div class="" data-section-overlay=""></div>
+        <div class="gp-component gp-component-id-l6DOvD_TjC" data-gp-container="" data-gp-style="true" data-gp-component-id="l6DOvD_TjC" data-gp-component="null" tabindex="0">
+            <div class="gp-component gp-component-id-JEo8K3uW6M" data-gp-component="layout-1" data-gp-dnd="" data-gp-style="" data-gp-component-id="JEo8K3uW6M" tabindex="0">
+                <div class="gp-component-id-UmPFHAFthHT">
+                    <div class="gp-component-id-ttKqvwTa07q" data-gp-grid-col="">
+                        <div class="gp-component gp-component-id-f4yNJUnFHQ" data-gp-container="" data-gp-style="true" data-gp-component-id="f4yNJUnFHQ" data-gp-component="container" tabindex="0"><div class="gp-text-container gp-component gp-component-id-AbZApzqDGo" data-gp-style="" data-gp-text="" data-gp-component="text_1" data-gp-dnd="" data-gp-component-id="AbZApzqDGo" style="" tabindex="0"><h2 class="gp-component-id-F5ZcImUvCa" data-id="quill-node-0">resumindo...</h2></div><ul class="gp-component gp-component-id-8SwZfvhoft" data-gp-container="" data-gp-dnd="" data-gp-style="true" data-gp-component-label="List container" data-gp-component="container" data-gp-component-id="8SwZfvhoft" tabindex="0"><div class="gp-text-container gp-component gp-component-id-HYly_FbZdU" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="HYly_FbZdU" data-gp-component="null" tabindex="0" style=""><p class="gp-component-id-HsiDG1sgs" data-id="quill-node-0">A proposta é simples e clara: <strong>Você irá aprender se um produto tem potencial de ser lucrativo analisando as métricas através dos anúncios que você fizer para sua oferta</strong></p></div><li class="gp-component gp-component-id-0jnMVpj44t" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="0jnMVpj44t" tabindex="0" style="">
+      <span class="fas fa-check gp-component gp-component-id-OO67j6AJ7h" data-gp-style="" data-gp-dnd="" data-gp-component="fa-icon" data-gp-component-id="OO67j6AJ7h" tabindex="0"></span>
+        <div class="gp-text-container gp-component gp-component-id-lDEfqNSDI_" data-gp-style="" data-gp-text="" data-gp-component-id="lDEfqNSDI_" data-gp-component="null"><p class="gp-component-id-YXWTYVHLpb" data-id="quill-node-0"><strong>Você NÃO precisa perder tempo testando</strong> - Siga o método validado para anunciar</p></div>
+      </li><li class="gp-component gp-component-id-DZtI3x2g6f" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="DZtI3x2g6f" tabindex="0" style="">
+      <span class="fas fa-check gp-component gp-component-id-n2u0L6Fp4V" data-gp-style="" data-gp-dnd="" data-gp-component="fa-icon" data-gp-component-id="n2u0L6Fp4V" tabindex="0"></span>
+        <div class="gp-text-container gp-component gp-component-id-DFNuYzrobo" data-gp-style="" data-gp-text="" data-gp-component-id="DFNuYzrobo" data-gp-component="null"><p class="gp-component-id-Yq0J6WT9Tn" data-id="quill-node-0">Identificar se uma oferta <strong>TEM POTENCIAL DE LUCRO</strong> - Siga o planejador e veja se uma oferta tem potencial ou não de gerar lucro</p></div>
+      </li><li class="gp-component gp-component-id-bu8AvkDpNb" data-gp-dnd="" data-gp-style="" data-gp-component="list-icon" data-gp-component-id="bu8AvkDpNb" tabindex="0">
+      <span class="fas fa-check gp-component gp-component-id-h1CcfHSSR02" data-gp-style="" data-gp-dnd="" data-gp-component="fa-icon" data-gp-component-id="h1CcfHSSR02" tabindex="0"></span>
+        <div class="gp-text-container gp-component gp-component-id-fH7odpxw3rd" data-gp-style="" data-gp-text="" data-gp-component-id="fH7odpxw3rd" data-gp-component="null"><p class="gp-component-id-I6SiTaIb21r" data-id="quill-node-0">Economize dinheiro com anúncios que não convertem</p></div>
+      </li></ul></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section class="gp-component gp-component-id-5L6jvMafb" data-gp-component="block" data-gp-style="" data-gp-block="true" data-gp-component-id="5L6jvMafb" tabindex="0" id="5L6jvMafb" style="" data-gp-block-id="12407509" data-gp-block-type="block" data-gp-block-data="{" id":12407509,"type":"block","thumbnail":"="" assets.grooveapps.com="" pages-screenshots="" 68377295b8afc.png","category":"content","tag":"designed","user_id":"cb08dae0-46f4-4b0a-ace1-566afb264641","filename":null,"height":628,"global":0,"tailwind":0,"created_at":"2025-05-28="" 20:31:17"}"=""><a name="5L6jvMafb" data-gp-block-anchor=""></a>
+        <div class="" data-section-overlay=""></div>
+        <div class="gp-component gp-component-id-YsQxOvwRQY" data-gp-container="" data-gp-style="true" data-gp-component-id="YsQxOvwRQY" data-gp-component="container" tabindex="0"><div class="gp-component-id-0vJwCFpiW7 gp-component" data-gp-dnd="" data-gp-style="" data-gp-component="layout-2-2" data-gp-component-id="0vJwCFpiW7" tabindex="0">
+      <div class="gp-component-id-NUaqGkXSS5">
+        <div class="gp-component-id-uSja97O0l8" data-gp-grid-col="">
+          <div class="gp-component-id-M3XCkVigr5 gp-component" data-gp-container="" data-gp-style="true" data-gp-component-id="M3XCkVigr5" data-gp-component="container" tabindex="0"><div class="gp-component-id-aIAXvy3LgE gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="aIAXvy3LgE" tabindex="0"><div class="gp-text-container gp-component gp-component-id-S8wJ2febZY" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="S8wJ2febZY" data-gp-component="null" style="" tabindex="0"><h2 class="gp-component-id-Zwa912fpDg" data-id="quill-node-0"> <strong>Jota</strong></h2></div></div><div class="gp-component-id-LUDKUayvmC gp-component" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="LUDKUayvmC" tabindex="0" style=""><div class="gp-text-container gp-component gp-component-id-_0QCIxLm1p" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="_0QCIxLm1p" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-xBEPwih8vk" data-id="quill-node-0">Eu estou há mais de 15 ajudando pessoas a mudarem de vidas e conseguirem ter liberdade financeira através da internet.<br></p><p class="gp-component-id-xBEPwih8vk" data-id="quill-node-1">Já ajudei dezenas de milhares de pessoas a mudarem de vida e desejo continuar ajudando muito mais pessoas através do meu conhecimento.<br></p><p class="gp-component-id-xBEPwih8vk" data-id="quill-node-2">Se você quiser aprender com quem de fato tem resultado e experiência de mercado, chegou a hora.</p></div></div><a href="#oTxW4hCTt" data-gp-button-id="jUVy8pwX-" class="items-center gp-component gp-component-id-SG_56iuxqZ" data-gp-style="" data-gp-dnd="" data-gp-component="button" data-gp-component-id="SG_56iuxqZ">
+    
+    <div style="display: inline-block; flex-grow: 1;">
+      <div class="text-inherit gp-component gp-component-id-ROV_KTVd0a" data-gp-component="button main-label" data-gp-style="" data-gp-component-id="ROV_KTVd0a">SIM! Eu quero vender todos os dias</div>
+      
+    </div>
+    
+    
+  </a><div class="gp-text-container gp-component gp-component-id-ecv1IZtHYrQ" data-gp-style="" data-gp-text="" data-gp-dnd="" data-gp-component-id="ecv1IZtHYrQ" data-gp-component="null" style="" tabindex="0"><p class="gp-component-id-6McAOZCUtth" data-id="quill-node-0">De R$197 Por apenas R$ 29,90</p></div></div>
+        </div>
+        <div class="gp-component-id-AmwaXqtWPa" data-gp-grid-col="">
+          <div class="gp-component gp-component-id-aKYZ4p010b1" data-gp-container="" data-gp-style="true" data-gp-component-id="aKYZ4p010b1" data-gp-component="container" tabindex="0"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNjY5MTMwMDI1X3Bob3RvMjAyMi0wNS0wNTAwLTE3LTMwLmpwZw.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-N4CaUF0H0fg" data-gp-style="" data-gp-dnd="" data-gp-classes="" data-gp-component="image" data-gp-component-id="N4CaUF0H0fg" tabindex="0"></div>
+        </div>
+      </div>
+    </div></div>
+    </section><section class="gp-component gp-component-id-hBry8TVj_" data-gp-component="block" data-gp-style="" data-gp-block-id="12342332" data-gp-block="true" data-gp-block-data="{" id":12342332,"type":"block","thumbnail":"="" assets.grooveapps.com="" pages-previews="" 641f1b7dadc24.png","category":"footer","tag":"modern","user_id":"global","filename":null,"height":300,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="hBry8TVj_" data-gp-block-type="block" id="hBry8TVj_" tabindex="0"><a name="hBry8TVj_" data-gp-block-anchor=""></a>
+        <div class="" data-section-overlay=""></div>
+        <div class="gp-component gp-component-id-EsQEkAFVmg" data-gp-container="" data-gp-style="true" data-gp-component-id="EsQEkAFVmg" data-gp-component="container" tabindex="0"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ2Mzc4ODY1X21pbmJyYW5kYnIud2VicA.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-zw6f45NYk" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="zw6f45NYk" tabindex="0"><div data-gp-dnd="" data-gp-style="" class="gp-component gp-component-id-5ES0zGV3Nk" data-gp-component="navbar_2" data-gp-component-id="5ES0zGV3Nk" tabindex="0"><div class="gp-component-id-tn5W00GbCC" data-gp-container="" tabindex="0" data-gp-style="true" data-gp-component-id="tn5W00GbCC" data-gp-component="container">
+       
+<button class="gp-component gp-component-id-42j6E2J3jM" data-menu-toggle="" data-gp-dnd="" data-gp-style="" data-gp-component-id="42j6E2J3jM" data-gp-component="null"></button>
+<div class="gp-component-id-J7LAlK2SlB"></div> 
+      <div class="gp-component gp-component-id-9RCwjq9C_V" data-gp-dnd="" data-gp-component-id="9RCwjq9C_V" data-gp-component="null" tabindex="0"></div>
+      
+    </div></div><div class="gp-text-container gp-component gp-component-id-RjX2AToYGLN" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="RjX2AToYGLN" data-gp-component="null" tabindex="0" style=""><p class="gp-component-id-Lu1_yJRFgeN" data-id="quill-node-0">© minbrand - All rights reserved</p></div></div>
+    </section>
+      
+      
+      
+      
+      
+      
+      
+      </div>
+      <div id="blocks-staging" style="top: 0px; left: 0; position: absolute;"></div>
+    </div>
+    <div id="custom-bottom">
+      
+    </div>
+    <script>
+      (function() {
+        var callSiteCallbacks = function() {
+          if(window.site && window.site.subscribed) {
+            site.subscribed.forEach(callback => {
+              callback();
+            });
+          }
+        };
+        document.readyState !== 'loading' ? callSiteCallbacks() : document.addEventListener("DOMContentLoaded", callSiteCallbacks);
+      })();
+    </script>
+    <script src="js/inpage_published.js"></script>
+        
+      
+    
+    </body></html>
