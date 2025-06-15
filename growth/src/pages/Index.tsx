@@ -167,7 +167,7 @@ const Index = () => {
             </h2>
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
               <p className="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed">
-                Trabalho com investimentos <strong className="text-orange-600">a partir de R$ 2.000 mensais</strong> 
+                Trabalho com investimentos <strong className="text-orange-600">a partir de R$ 2.000 mensais </strong> 
                 pela prestação de serviço completo de marketing.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
@@ -270,7 +270,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold mb-4">Email</h3>
-                <p className="text-gray-600">contato@seudominio.com</p>
+                <p className="text-gray-600">minbrandmedia@gmail.com</p>
               </div>
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold mb-4">WhatsApp</h3>
@@ -284,7 +284,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 bg-gray-900 text-white">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">© 2025 Jonathan Amorim (Jota) – Todos os direitos reservados</p>
+          <p className="text-gray-400">© 2025 MinBrand – Todos os direitos reservados</p>
         </div>
       </footer>
     </div>
