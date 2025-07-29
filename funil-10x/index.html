@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Funil de Vendas 10X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Site feito pela minbrand -->
+     <!-- NAO COLOQUE PIXEL DO META ADS NESSA PÁGINA, COPY AGRESSIVA, COLOQUE O PIXEL NO CHECKOUT -->
+   
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfcfb;
+            color: #3d3d3d;
+        }
+        .funnel-step {
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .funnel-step.active {
+            border-color: #0d9488;
+            background-color: #f0fdfa;
+            transform: scale(1.05);
+        }
+        .funnel-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <main class="container mx-auto px-4 py-8 md:py-16 flex-grow">
+
+        <header class="text-center mb-12 md:mb-20">
+          <p><b>Curso em vídeo aulas ensinando a criar</b></p>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-teal-800 mb-4">O Funil de Vendas com ROI de 10X</h1>
+            <p class="text-lg md:text-xl text-stone-600 max-w-3xl mx-auto">Uma metodologia comprovada, capaz para transformar <b>cada R$100 investidos em R$1.000 de retorno</b>, criando uma máquina de vendas previsível e escalável.</p>
+        </header>
+
+        <section id="interactive-funnel" class="mb-12 md:mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-stone-800">Explore o Método Interativo</h2>
+            <p class="text-center text-stone-500 mb-10">Clique em cada etapa para entender a estratégia por trás da mágica.</p>
+
+            <div class="flex flex-col items-center space-y-4">
+                
+                <div id="step-attraction" class="funnel-step active w-full max-w-lg p-6 bg-white border-2 border-stone-200 rounded-xl shadow-md text-center">
+                    <span class="text-sm font-semibold text-teal-600">ETAPA 1</span>
+                    <h3 class="text-xl font-bold text-stone-800 mt-1">Atração e Produto de Entrada</h3>
+                </div>
+                
+                <div class="text-3xl text-stone-400">↓</div>
+
+                <div id="step-upsell" class="funnel-step w-full max-w-lg p-6 bg-white border-2 border-stone-200 rounded-xl shadow-md text-center">
+                    <span class="text-sm font-semibold text-teal-600">ETAPA 2</span>
+                    <h3 class="text-xl font-bold text-stone-800 mt-1">Upsell Imediato & Downsell</h3>
+                </div>
+
+                <div class="text-3xl text-stone-400">↓</div>
+
+                <div id="step-contact" class="funnel-step w-full max-w-lg p-6 bg-white border-2 border-stone-200 rounded-xl shadow-md text-center">
+                    <span class="text-sm font-semibold text-teal-600">ETAPA 3</span>
+                    <h3 class="text-xl font-bold text-stone-800 mt-1">Contato Humano Estratégico</h3>
+                </div>
+
+                <div class="text-3xl text-stone-400">↓</div>
+                
+                <div id="step-conversion" class="funnel-step w-full max-w-lg p-6 bg-white border-2 border-stone-200 rounded-xl shadow-md text-center">
+                    <span class="text-sm font-semibold text-teal-600">ETAPA 4</span>
+                    <h3 class="text-xl font-bold text-stone-800 mt-1">Conversão de Alto Valor</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="content-display" class="bg-stone-100 p-6 md:p-10 rounded-2xl min-h-[300px] mb-12 md:mb-20">
+            <div id="content-area">
+            </div>
+        </section>
+
+        <section id="results" class="text-center mb-12 md:mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10 text-stone-800">Resultados Comprovados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6 text-left">
+                    <div>
+                        <p class="text-5xl font-extrabold text-teal-600">10X ROI</p>
+                        <p class="text-stone-600 mt-1">Cada R$100 investidos em anúncios se transformaram em R$1.000 em vendas, uma performance extraordinária e consistente.</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-extrabold text-teal-600">1:13</p>
+                        <p class="text-stone-600 mt-1">A proporção mágica: a cada 13 vendas do produto de entrada (R$9,90), uma venda de alto valor (+R$1.000) era realizada.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="course-summary" class="bg-teal-800 text-white p-8 md:p-12 rounded-2xl">
+            <h2 class="text-3xl font-bold text-center mb-8">O Que Você Vai Dominar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-10">
+                <div class="bg-teal-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-2">Fundação Estratégica</h3>
+                    <p class="text-teal-100">Aprenda a desenhar uma esteira de produtos coesa, onde seu cliente de R$9,90 é o mesmo com potencial para comprar seu produto de R$5.000.</p>
+                </div>
+                <div class="bg-teal-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-2">Execução Prática</h3>
+                    <p class="text-teal-100">Construa o funil passo a passo: das páginas de venda e upsell aos anúncios que atraem o público comprador certo.</p>
+                </div>
+                <div class="bg-teal-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-2">Conversão Humanizada</h3>
+                    <p class="text-teal-100">Domine os scripts e roteiros para contato via WhatsApp e ligações que transformam clientes em fãs e fecham vendas de alto valor.</p>
+                </div>
+            </div>
+             <div class="text-center mt-10">
+                <p class="text-2xl text-teal-100">Acesso completo por apenas</p>
+                <p class="text-4xl font-extrabold text-white my-2">12 parcelas de R$ 99,70</p>
+                <p class="text-lg text-teal-200 mb-6">ou R$ 997 à vista</p>
+                <a href="https://actuspay.com" target="_blank" class="block w-full max-w-md mx-auto bg-white text-teal-800 font-bold py-4 px-8 rounded-full text-xl hover:bg-stone-100 transition-colors shadow-lg mb-4">
+                    GARANTIR MINHA VAGA AGORA
+                </a>
+                <a href="https://wa.me/5583994066143" target="_blank" class="block w-full max-w-md mx-auto bg-transparent border-2 border-teal-300 text-teal-100 font-bold py-3 px-8 rounded-full text-lg hover:bg-teal-700 transition-colors">
+                    Falar com a equipe
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-800 text-stone-300 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <span class="text-2xl font-bold tracking-wider">minbrand</span>
+            </div>
+            <p class="text-xs text-stone-400 max-w-3xl mx-auto mb-4">
+                Aviso Legal: Os resultados apresentados são da nossa experiência e de nossos alunos. Seus resultados podem variar e dependem exclusivamente do seu esforço e aplicação do método. Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.
+            </p>
+            <p class="text-xs text-stone-500 max-w-3xl mx-auto">
+                Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
+            </p>
+            <div class="mt-4 text-sm text-stone-400">
+                &copy; 2025 minbrand. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const funnelContent = {
+                'step-attraction': {
+                    title: 'Etapa 1: Atração e Produto de Entrada',
+                    content: `
+                        <p class="text-stone-600 mb-4">O ponto de partida de todo o sistema. O objetivo aqui não é lucrar, mas sim "comprar" um cliente qualificado a um baixo custo. A chave é criar um produto de baixo valor (ex: R$9,90) que seja irresistível para o exato perfil de cliente que tem potencial para comprar suas soluções mais caras.</p>
+                        <ul class="list-disc list-inside space-y-2 text-stone-700">
+                            <li><strong>Produto de Entrada (Low Ticket):</strong> Entrega um valor real e resolve um pequeno problema, mas deixa claro que há um próximo nível.</li>
+                            <li><strong>Order Bumps:</strong> Ofertas complementares na página de checkout para aumentar o valor inicial da transação e pagar os custos de tráfego.</li>
+                            <li><strong>Anúncios Focados:</strong> O tráfego é direcionado para a oferta de R$9,90, com comunicação que atrai o avatar ideal para o produto de alto valor.</li>
+                        </ul>
+                    `
+                },
+                'step-upsell': {
+                    title: 'Etapa 2: Upsell Imediato e Downsell Inteligente',
+                    content: `
+                        <p class="text-stone-600 mb-4">Aproveitamos o momento de maior confiança do cliente - logo após a primeira compra - para fazer uma oferta de alto valor. A psicologia é simples: quem já passou o cartão uma vez está mais propenso a fazê-lo novamente.</p>
+                        <ul class="list-disc list-inside space-y-2 text-stone-700">
+                            <li><strong>Upsell do Produto Principal (R$997+):</strong> Imediatamente após a compra de R$9,90, o cliente vê uma oferta única e com forte senso de urgência para o produto de alto valor (ex: de R$2.997 por R$1.997).</li>
+                            <li><strong>Downsell Estratégico (R$197):</strong> Se o cliente recusa o upsell principal, apresentamos uma oferta de menor valor, mas que seja um complemento perfeito ao produto que ele acabou de comprar. Isso recupera vendas e aumenta o LTV.</li>
+                        </ul>
+                    `
+                },
+                'step-contact': {
+                    title: 'Etapa 3: O Contato Humano que Vende',
+                    content: `
+                        <p class="text-stone-600 mb-4">Esta é a virada de chave que separa este método dos funis puramente automáticos. O contato humano gera confiança, quebra objeções e permite ofertas personalizadas. Cada cliente que compra o produto de R$9,90 entra em um fluxo de contato pessoal.</p>
+                        <ul class="list-disc list-inside space-y-2 text-stone-700">
+                            <li><strong>Contato via WhatsApp:</strong> Para liberar o acesso ao produto, criar relacionamento e fazer a primeira oferta consultiva do produto de alto valor.</li>
+                            <li><strong>Ligação Estratégica:</strong> No dia seguinte, uma ligação para "ajudar" com o treinamento serve como pretexto para apresentar uma nova condição especial para o produto caro (ex: de R$1.997 por R$1.497).</li>
+                        </ul>
+                    `
+                },
+                'step-conversion': {
+                    title: 'Etapa 4: A Conversão na Call de Valor',
+                    content: `
+                        <p class="text-stone-600 mb-4">A etapa final e mais poderosa do funil. Se o cliente ainda não comprou o produto de alto valor, ele é convidado para uma chamada que, teoricamente, faz parte da entrega do produto de R$9,90. Na prática, é a sua melhor oportunidade de venda.</p>
+                        <ul class="list-disc list-inside space-y-2 text-stone-700">
+                            <li><strong>Call de Entrega/Venda:</strong> Uma conversa individual para entender as necessidades do cliente e mostrar como seu produto principal é a solução perfeita.</li>
+                            <li><strong>Oferta Irresistível:</strong> Nesta chamada, é apresentada a condição final e mais atrativa (ex: 12x de R$99), quebrando a barreira do preço e focando no valor da transformação. É aqui que a maioria das vendas de R$1k acontece.</li>
+                        </ul>
+                    `
+                }
+            };
+
+            const contentArea = document.getElementById('content-area');
+            const steps = document.querySelectorAll('.funnel-step');
+
+            function updateContent(stepId) {
+                const stepData = funnelContent[stepId];
+                contentArea.innerHTML = `
+                    <h3 class="text-2xl font-bold text-stone-800 mb-4">${stepData.title}</h3>
+                    ${stepData.content}
+                `;
+
+                steps.forEach(step => {
+                    step.classList.remove('active');
+                    if (step.id === stepId) {
+                        step.classList.add('active');
+                    }
+                });
+            }
+
+            steps.forEach(step => {
+                step.addEventListener('click', () => {
+                    updateContent(step.id);
+                });
+            });
+
+            updateContent('step-attraction');
+
+            const ctx = document.getElementById('roiChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Investimento', 'Retorno'],
+                    datasets: [{
+                        label: 'Performance Financeira (R$)',
+                        data: [100, 1000],
+                        backgroundColor: [
+                            'rgba(245, 158, 11, 0.2)',
+                            'rgba(13, 148, 136, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(245, 158, 11)',
+                            'rgb(13, 148, 136)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'R$ ' + value;
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
