@@ -1,0 +1,243 @@
+
+        /* Reset básico para evitar margens e paddings indesejados */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Impede a rolagem horizontal */
+        }
+
+        /* Estilos Gerais */
+        body {
+            background-color: #0c0c0c;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            color: #d10000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 0.63em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+
+          
+        /* Top Banner */
+        .top-banner {
+            background: #d10000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+        }
+
+        .top-banner span {
+            color: #ffcc00;
+        }
+
+        /* Navegação */
+        .preto {
+            width: 100%;
+            background: #1a1a1a;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto; /* Centraliza o nav */
+            padding: 15px 20px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            text-align: center;
+           
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        .product {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto; /* Centraliza o produto */
+            flex-wrap: wrap;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 400px; /* Limita a largura da imagem */
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            text-align: left;
+            flex: 1;
+            min-width: 250px; /* Evita que o conteúdo fique muito compacto */
+        }
+
+        .buy-btn {
+            background: #d10000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        .details {
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 20px auto; /* Centraliza a descrição */
+            text-align: left;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        .description h2 {
+            color: #d10000;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #1a1a1a;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .product {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .product img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .product-info {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-banner {
+                font-size: 12px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .buy-btn {
+                font-size: 16px;
+            }
+
+            .description {
+                padding: 15px;
+            }
+        }
