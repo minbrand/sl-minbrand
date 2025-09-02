@@ -1,0 +1,20 @@
+.container {
+  max-width: 80%;
+  background: white;
+  padding: 10px 15px;
+  margin: 0 auto;
+}
+
+
+
+
+/* 
+
+ELIMINAR UM DOS DOIS E A PÁGINA DE VENDAS PARA ELIMINAR
+
+*/
+
+.headline{display:block;box-sizing:border-box}.headline img{display:block;width:100%;max-width:350px;margin:0 auto 15px auto}.headline h2{display:block;width:100%;margin:0 auto 15px auto;font-family:"Roboto Condensed","Arial",sans-serif;font-size:14px;max-width:700px;text-align:center;font-size:22px;line-height:130%;color:#fff}.headline h2 span{font-weight:bold;color:#61d2ee}.wrapper-video{width:98%;margin:0 auto;position:relative}@media only screen and (min-width: 576px){.wrapper-video{width:80%}}@media only screen and (min-width: 768px){.wrapper-video{width:75%}}@media only screen and (min-width: 992px){.wrapper-video{width:100%;max-width:950px}}
+
+
+.main_headline{display:block;box-sizing:border-box;width:100%;max-width:800px;margin:0 auto}.main_headline .main_headlineImgDesk img{display:none;margin:0 auto;width:100%}@media only screen and (min-width: 992px){.main_headline .main_headlineImgDesk img{display:block;max-width:400px}}.main_headline .main_headlineImgMob img{display:block;margin:0 auto;width:100%;max-width:200px}@media only screen and (min-width: 992px){.main_headline .main_headlineImgMob img{display:none}}.main_headline h1{font-size:24px;font-family:"Roboto Condensed","Arial",sans-serif;line-height:130%;font-weight:bold;color:#fff;text-align:center;margin-bottom:15px}@media only screen and (min-width: 768px){.main_headline h1{font-size:28px}}.main_headline h1.main_invisibleH1{display:block;width:0px;height:0px;opacity:0;margin:0px}.main_headline h1 span{color:#ffd900;font-weight:bold}.main_headline h2{font-size:22px;font-family:"Roboto Condensed","Arial",sans-serif;line-height:130%;color:#fff;text-align:center;margin-bottom:15px;letter-spacing:2px}@media only screen and (min-width: 768px){.main_headline h2{font-size:26px}}.main_headline h2 span{color: #eeba2a}.main_headline p{font-size:18px;font-family:"Roboto Condensed","Arial",sans-serif;line-height:130%;font-weight:normal;color: #eeba2a;text-align:center;margin-bottom:15px}.main_headline p span{color:#ffd900;font-weight:bold}@media only screen and (min-width: 768px){.main_headline p{font-size:20px}}.main_headline strong,.main_headline b{font-weight:bold}.main_headline em,.main_headline i{font-style:italic}.main_headline u{text-decoration:underline}
