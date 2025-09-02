@@ -6313,8 +6313,8 @@ var btnBell = document.querySelector(".bell-button"),
 var tituloOriginal = document.title;
 ("use strict");
 var idVideoVsl = "918Ta0OnelM",
-  tempoCTA = 40,
-  tempoBell = 45,
+  tempoCTA = 780,
+  tempoBell = 805,
   tag = document.createElement("script");
 tag.src = "https://www.youtube.com/player_api";
 var player,
