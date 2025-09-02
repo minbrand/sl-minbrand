@@ -6266,8 +6266,8 @@ jQuery(document).ready(function (e) {
 ("use strict");
 var adjustUrlSearch,
   checkout =
-    "https://store.empiricus.com.br/crypto-legacy-anual-crl16-a-i/pagamento/?s=1&p=1",
-  copyReadVersion = "https://wa.me/5583994066143",
+    "https://checkout.actuspay.com/checkouts/dfy-curso/?add-to-cart=416",
+  copyReadVersion = "https://wa.me/5583994066143?text=Ol%C3%A1%2C%20quero%20saber%20mais%20informa%C3%A7%C3%B5es%20para%20voc%C3%AAs%20criarem%20minha%20estrutura%20de%20vendas%20em%2007%20dias%20do%20meu%20curso",
   getLocationSearch = window.location.search;
 adjustUrlSearch =
   "" == getLocationSearch
@@ -6312,7 +6312,7 @@ var btnBell = document.querySelector(".bell-button"),
   });
 var tituloOriginal = document.title;
 ("use strict");
-var idVideoVsl = "14vp3tOEW34",
+var idVideoVsl = "918Ta0OnelM",
   tempoCTA = 40,
   tempoBell = 45,
   tag = document.createElement("script");
