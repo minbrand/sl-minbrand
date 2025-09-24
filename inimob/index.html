@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinBrand - Parceria Estratégica para Imobiliárias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-54C9CBLK');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2a2a2a;
+            --success: #27ae60;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-large {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #c0392b;
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            max-width: 120px;
+            height: auto;
+        }
+        
+        /* Seção de desafios */
+        .challenges {
+            background-color: white;
+        }
+        
+        .challenge-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .challenge-item {
+            background-color: var(--light);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent);
+            border-radius: 5px;
+        }
+        
+        /* Seção de VSL */
+        .vsl-section {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .vsl-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .vsl-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Seção de Parceria Estratégica */
+        .partnership-section {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .partnership-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .partnership-content {
+            flex: 1;
+        }
+        
+        .partnership-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .partnership-visual {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .partnership-visual i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .partnership-visual h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .partnership-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .partnership-benefits {
+            margin: 30px 0;
+        }
+        
+        .partnership-benefit {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .partnership-benefit i {
+            color: var(--success);
+            margin-right: 15px;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+        
+        .partnership-benefit-content h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        /* Seção de solução */
+        .solution {
+            background-color: var(--light);
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .solution-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .solution-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .solution-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        /* Seção de benefícios específicos */
+        .specific-benefits {
+            background-color: white;
+        }
+        
+        .benefits-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .benefit-category {
+            margin-bottom: 40px;
+        }
+        
+        .benefit-category h3 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-icon {
+            color: var(--success);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        /* Seção de diferenciais */
+        .differentiators {
+            background-color: var(--light);
+        }
+        
+        .differentiator-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .differentiator-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .differentiator-icon {
+            font-size: 1.5rem;
+            color: var(--success);
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Seção de jornada */
+        .journey {
+            background-color: white;
+        }
+        
+        .journey-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .journey-step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* Seção FAQ */
+        .faq-section {
+            background-color: var(--light);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+        }
+        
+        .cta-section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+        
+        .benefits-highlight {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .benefit-highlight-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .journey-steps {
+                flex-direction: column;
+            }
+            
+            .journey-step {
+                margin-bottom: 30px;
+            }
+            
+            .benefit-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partnership-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .partnership-subtitle {
+                text-align: center;
+            }
+            
+            .partnership-benefit {
+                text-align: left;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            .btn-large {
+                padding: 12px 25px;
+                font-size: 1.1rem;
+            }
+            
+            header {
+                padding: 70px 0;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            .partnership-visual {
+                height: 250px;
+            }
+            
+            .partnership-visual i {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54C9CBLK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header/Hero Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://minbrand.com/images/minbrand-logobranca.png" alt="MinBrand" class="logo">
+            </div>
+            <h1>Impulsione Sua Imobiliária com uma Parceria de Alto Impacto</h1>
+            <p>Não somos apenas consultores. Somos o combustível que vai acelerar seu crescimento e multiplicar seus resultados. Deixe a gestão do dia a dia conosco e foque no que realmente importa: escalar seu negócio.</p>
+            <a href="https://wa.me/5583994066143?text=Olá! Gostaria de saber mais sobre a parceria para impulsionar minha imobiliária." class="btn btn-large" id="cta-header" target="_blank">FALAR COM UM ESPECIALISTA AGORA</a>
+        </div>
+    </header>
+
+    <!-- Seção de Desafios -->
+    <section class="challenges">
+        <div class="container">
+            <h2>Seu dia a dia é marcado por esses desafios?</h2>
+            <div class="challenge-list">
+                <div class="challenge-item">
+                    <h3>Falta de padrão nos processos</h3>
+                    <p>Dependência excessiva do "talento" individual de cada corretor, sem processos consistentes de captação e vendas.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Dificuldade em gerar leads qualificados</h3>
+                    <p>Fluxo irregular de leads qualificados e proprietários interessados em captação, dificultando o planejamento.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Falta de clareza sobre os números</h3>
+                    <p>Não saber exatamente qual sua taxa de conversão, onde estão os gargalos e quais ações trazem melhor retorno.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Dificuldade em reter e capacitar corretores</h3>
+                    <p>Alta rotatividade e falta de método estruturado para treinamento e desenvolvimento da equipe.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Dinheiro deixado na mesa</h3>
+                    <p>Sensação de que poderia vender mais se tivesse um sistema profissional para escalar as operações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de VSL -->
+    <section class="vsl-section">
+        <div class="container">
+            <div class="vsl-container">
+                <h2>Assista e Descubra Como Vamos Impulsionar Sua Imobiliária</h2>
+                <p>Neste vídeo de 5 minutos, mostramos exatamente como nossa parceria vai acelerar seu crescimento e multiplicar seus resultados.</p>
+                
+                <div class="video-container">
+                    <!-- Vídeo corrigido - usando embed correto do YouTube -->
+                    <iframe src="https://www.youtube.com/embed/dYHD61pUql0?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <p>Após assistir ao vídeo, você entenderá por que somos a escolha certa para impulsionar seu negócio.</p>
+                <a href="https://wa.me/5583994066143?text=Assisti ao vídeo e quero saber mais sobre como impulsionar minha imobiliária." class="btn btn-accent btn-large" id="cta-vsl" style="margin-top: 20px;">QUERO IMPULSIONAR MINHA IMOBILIÁRIA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Parceria Estratégica -->
+    <section class="partnership-section">
+        <div class="container">
+            <h2>Parceria Estratégica para o Crescimento da Sua Imobiliária</h2>
+            <p class="partnership-subtitle">Nós focamos no crescimento, você foca na gestão do seu negócio</p>
+            
+            <div class="partnership-container">
+                <div class="partnership-content">
+                    <p>Nossa parceria estratégica é desenhada para que cada parte foque no que faz de melhor. Enquanto nossa equipe se dedica integralmente ao crescimento da sua imobiliária, você pode concentrar seus esforços na gestão do negócio e no relacionamento com clientes.</p>
+                    
+                    <div class="partnership-benefits">
+                        <div class="partnership-benefit">
+                            <i class="fas fa-rocket"></i>
+                            <div class="partnership-benefit-content">
+                                <h4>Nós Impulsionamos o Crescimento</h4>
+                                <p>Desenvolvemos e implementamos estratégias de captação, marketing e vendas que geram resultados mensuráveis.</p>
+                            </div>
+                        </div>
+                        <div class="partnership-benefit">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="partnership-benefit-content">
+                                <h4>Você Gerencia o Negócio</h4>
+                                <p>Com a operação otimizada, você tem mais tempo para tomar decisões estratégicas e fortalecer seu mercado.</p>
+                            </div>
+                        </div>
+                        <div class="partnership-benefit">
+                            <i class="fas fa-sync-alt"></i>
+                            <div class="partnership-benefit-content">
+                                <h4>Resultados Compartilhados</h4>
+                                <p>Nosso sucesso é medido pelo seu crescimento. Trabalhamos com transparência total e metas claras.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>O investimento na parceria é personalizado de acordo com o tamanho e as necessidades específicas da sua imobiliária. Em uma conversa, vamos entender seu contexto e apresentar uma proposta que faça sentido para o seu negócio.</p>
+                    
+                    <a href="https://wa.me/5583994066143?text=Quero saber mais sobre a parceria estratégica para minha imobiliária." class="btn btn-large" id="cta-partnership" style="margin-top: 20px;">QUERO SABER MAIS SOBRE A PARCERIA</a>
+                </div>
+                
+                <div class="partnership-image">
+                    <div class="partnership-visual">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Parceria Estratégica</h3>
+                        <p style="text-align: center; font-size: 1rem;">Crescimento Compartilhado, Resultados Multiplicados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Solução -->
+    <section class="solution">
+        <div class="container">
+            <h2>O Que Você Vai Ganhar Com Nossa Parceria</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Implementamos um sistema completo que organiza, automatiza e acelera seus resultados. Veja o que incluímos:</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Diagnóstico Completo da Sua Imobiliária</h3>
+                    <p>Analisamos profundamente sua operação atual, identificando pontos fortes, oportunidades e gargalos que impedem seu crescimento.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Posicionamento Estratégico de Marca</h3>
+                    <p>Reposicionamos sua marca no mercado para atrair os clientes certos e justificar premium de preço quando necessário.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Aumento de Faturamento Comprovado</h3>
+                    <p>Implementamos estratégias específicas para aumentar suas vendas e comissões, com metas claras e acompanhamento contínuo.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Criação de Processos Eficientes</h3>
+                    <p>Desenvolvemos processos padronizados para todas as áreas: captação, vendas, pós-venda e gestão de equipe.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Intranet para Treinamento e Feedback</h3>
+                    <p>Plataforma exclusiva para capacitação da equipe, comunicação interna e acompanhamento individual de cada corretor.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Estratégia de Marketing Ativo</h3>
+                    <p>Campanhas direcionadas para geração de leads qualificados e captação de imóveis com alto potencial de venda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios Específicos -->
+    <section class="specific-benefits">
+        <div class="container">
+            <h2>Resultados que Você Pode Esperar</h2>
+            <div class="benefits-container">
+                <div class="benefit-category">
+                    <h3><i class="fas fa-user-tie"></i> Para o Empresário/Gestor</h3>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Mais liberdade e menos dependência da sua presença no dia a dia</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Clareza total sobre o desempenho do negócio através de KPIs</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Empresa valorizada e preparada para escalar ou eventual venda</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Redução de estresse e mais tempo para estratégias de longo prazo</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-category">
+                    <h3><i class="fas fa-chart-bar"></i> Para a Operação Comercial</h3>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Acompanhamento de resultados em tempo real com indicadores-chave</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Identificação precisa do que está faltando para bater as metas</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Processos otimizados que aumentam a produtividade da equipe</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check"></i></div>
+                            <div>Metas claras e sistema de recompensas alinhado com os resultados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Diferenciais -->
+    <section class="differentiators">
+        <div class="container">
+            <h2>O que Torna Nossa Parceria Única?</h2>
+            <div class="differentiator-list">
+                <div class="differentiator-item">
+                    <div class="differentiator-icon"><i class="fas fa-handshake"></i></div>
+                    <div>
+                        <h3>Parceiros Estratégicos de Crescimento</h3>
+                        <p>Não somos apenas consultores. Atuamos como extensão da sua equipe, com compromisso real com seus resultados.</p>
+                    </div>
+                </div>
+                <div class="differentiator-item">
+                    <div class="differentiator-icon"><i class="fas fa-tools"></i></div>
+                    <div>
+                        <h3>Implementação Prática, Não Apenas Teoria</h3>
+                        <p>Colocamos a mão na massa junto com sua equipe para garantir que as estratégias sejam implementadas com sucesso.</p>
+                    </div>
+                </div>
+                <div class="differentiator-item">
+                    <div class="differentiator-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div>
+                        <h3>Assessoria Contínua e Acompanhamento</h3>
+                        <p>Reuniões regulares de análise de resultados e ajustes de estratégia para garantir que as metas sejam alcançadas.</p>
+                    </div>
+                </div>
+                <div class="differentiator-item">
+                    <div class="differentiator-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <div>
+                        <h3>Solução Completa e Integrada</h3>
+                        <p>Oferecemos desde o diagnóstico inicial até o marketing, branding e gestão de equipe - tudo em um único lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Jornada -->
+    <section class="journey">
+        <div class="container">
+            <h2>Como Funciona Nossa Jornada de Parceria?</h2>
+            <div class="journey-steps">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <h3>Diagnóstico Estratégico</h3>
+                    <p>Analisamos sua operação atual, entendemos seus objetivos e identificamos oportunidades de melhoria.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <h3>Plano de Ação Personalizado</h3>
+                    <p>Desenvolvemos um plano específico para sua imobiliária, com metas claras e prazos definidos.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <h3>Implementação e Acompanhamento</h3>
+                    <p>Colocamos a mão na massa junto com sua equipe e acompanhamos os resultados continuamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona o investimento?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Temos um investimento de implementação sob medida, que varia de acordo com o tamanho e necessidades específicas da sua imobiliária. Além disso, atuamos como parceiros estratégicos de crescimento, com uma modelagem que alinha nossos interesses aos seus resultados.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que está incluído na parceria?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nossa parceria inclui diagnóstico completo, posicionamento de marca, criação de processos comerciais, estratégia de marketing ativo, plataforma de gestão, intranet para treinamento, acompanhamento de KPIs e assessoria contínua. Somos responsáveis pelo marketing e branding da sua empresa.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Minha imobiliária é elegível para a parceria?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com imobiliárias que tenham no mínimo 3 colaboradores e faturamento mensal em comissões a partir de R$ 20.000. Isso garante que temos base suficiente para implementar nossas estratégias e gerar resultados significativos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva para ver resultados?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os primeiros resultados geralmente aparecem em 30-60 dias, com melhorias significativas em 3-6 meses. O tempo varia de acordo com o engajamento da equipe e as particularidades de cada mercado.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso ter conhecimento em marketing ou gestão?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não! Nossa equipe especializada cuida de tudo para você. Nosso objetivo é justamente trazer esse conhecimento para sua imobiliária, permitindo que você foque no que faz melhor: negócios imobiliários.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Impulsionar Sua Imobiliária?</h2>
+            <p>A solução ideal para seus desafios está a uma conversa de distância. Não vendemos um pacote fechado. Montamos uma proposta personalizada e justa para o seu momento.</p>
+            
+            <div class="benefits-highlight">
+                <div class="benefit-highlight-item">Diagnóstico Completo</div>
+                <div class="benefit-highlight-item">Processos Otimizados</div>
+                <div class="benefit-highlight-item">Marketing Ativo</div>
+                <div class="benefit-highlight-item">Acompanhamento de KPIs</div>
+                <div class="benefit-highlight-item">Assessoria Contínua</div>
+            </div>
+            
+            <a href="https://wa.me/5583994066143?text=Olá! Gostaria de saber mais sobre a parceria para impulsionar minha imobiliária." class="btn btn-large btn-accent" id="cta-final" target="_blank">FALAR COM UM ESPECIALISTA AGORA</a>
+            
+            <p style="margin-top: 2rem; font-size: 1rem;">Em uma conversa rápida pelo WhatsApp, vamos entender seus desafios e apresentar uma proposta de valor personalizada.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://minbrand.com/images/minbrand-logobranca.png" alt="MinBrand" class="logo" style="max-width: 100px;">
+            </div>
+            <p style="margin: 10px 0; font-size: 1.1rem;">Impulsionadora de Negócios</p>
+            <p>Não perca mais tempo lutando contra problemas operacionais. Deixe que cuidamos disso para você escalar.</p>
+            <a href="https://wa.me/5583994066143?text=Olá! Gostaria de saber mais sobre a parceria para impulsionar minha imobiliária." class="btn" id="cta-footer" style="margin-top: 20px;" target="_blank">QUERO SER UMA IMOBILIÁRIA DE ALTA PERFORMANCE</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">© 2025 MinBrand. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Adiciona animação suave ao rolar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animação de entrada dos elementos ao rolar
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Aplicar animação aos elementos
+            const animatedElements = document.querySelectorAll('.challenge-item, .solution-card, .differentiator-item, .journey-step, .benefit-item, .partnership-benefit');
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+            
+            // FAQ toggle functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
