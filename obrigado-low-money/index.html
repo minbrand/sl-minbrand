@@ -119,7 +119,7 @@ window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   event: 'purchase',
   transaction_id: 'T' + Date.now(),
-  value: 97,
+  value: 0,
   currency: 'BRL'
 });
 </script>
@@ -128,7 +128,7 @@ window.dataLayer.push({
 <script>
   // Este trecho deve vir APÓS a definição do dataLayer, se você quiser usar os mesmos valores
   fbq('track', 'Purchase', {
-    value: 97, // Idealmente, substitua '0' por um valor real, ex: {{valor_da_compra}}
+    value: 0, // Idealmente, substitua '0' por um valor real, ex: {{valor_da_compra}}
     currency: 'BRL',
     transaction_id: 'T' + Date.now() // Usando o mesmo ID de exemplo do dataLayer
   });
